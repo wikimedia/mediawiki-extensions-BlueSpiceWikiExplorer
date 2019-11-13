@@ -12,7 +12,8 @@ class Extension extends \BlueSpice\Extension {
 	 * @param string &$sWidgetTitle
 	 * @return bool
 	 */
-	public function onBSUserSidebarGlobalActionsWidgetGlobalActions( UserSidebar $oUserSidebar, User $oUser, &$aLinks, &$sWidgetTitle ) {
+	public function onBSUserSidebarGlobalActionsWidgetGlobalActions( UserSidebar $oUserSidebar,
+		User $oUser, &$aLinks, &$sWidgetTitle ) {
 		$oSpecialWikiExplorer = SpecialPageFactory::getPage(
 				'WikiExplorer'
 		);
@@ -79,75 +80,75 @@ class Extension extends \BlueSpice\Extension {
 	 */
 	public static function getColumnDefinitions() {
 		$aColumns = [ [
-				'text' => wfMessage( 'sl_page_title' )->plain(),
+				'text' => wfMessage( 'bs-wikiexplorer-page-title' )->plain(),
 				'id' => 'page_title',
 				'width' => 200,
 				'dataIndex' => 'page_title',
 				'filter' => [ 'type' => 'string' ],
 				'sortable' => true,
 			], [
-				'text' => wfMessage( 'sl_page_namespace' )->plain(),
+				'text' => wfMessage( 'bs-wikiexplorer-page-namespace' )->plain(),
 				'id' => 'page_namespace',
 				'dataIndex' => 'page_namespace',
 				'filter' => [ 'type' => 'string' ],
 				'sortable' => true,
 			], [
-				'text' => wfMessage( 'sl_creation_date' )->plain(),
+				'text' => wfMessage( 'bs-wikiexplorer-creation-date' )->plain(),
 				'id' => 'page_created',
 				'dataIndex' => 'page_created',
 				'hidden' => true,
 				'filter' => [ 'type' => 'date', 'dataFormat' => 'YmdHis' ],
 				'sortable' => true,
 			], [
-				'text' => wfMessage( 'sl_is_redirect' )->plain(),
+				'text' => wfMessage( 'bs-wikiexplorer-is-redirect' )->plain(),
 				'id' => 'page_is_redirect',
 				'dataIndex' => 'page_is_redirect',
 				'hidden' => true,
 				'filter' => [ 'type' => 'boolean' ],
 				'sortable' => true,
 			], [
-				'text' => wfMessage( 'sl_last_comment' )->plain(),
+				'text' => wfMessage( 'bs-wikiexplorer-last-comment' )->plain(),
 				'id' => 'rev_comment',
 				'dataIndex' => 'rev_comment',
 				'hidden' => true,
 				'filter' => [ 'type' => 'string' ],
 				'sortable' => true,
 			], [
-				'text' => wfMessage( 'sl_last_edit_time' )->plain(),
+				'text' => wfMessage( 'bs-wikiexplorer-last-edit-time' )->plain(),
 				'id' => 'page_touched',
 				'dataIndex' => 'page_touched',
 				'hidden' => true,
 				'filter' => [ 'type' => 'date', 'dataFormat' => 'YmdHis' ],
 				'sortable' => true,
 			], [
-				'text' => wfMessage( 'sl_page_size' )->plain(),
+				'text' => wfMessage( 'bs-wikiexplorer-page-size' )->plain(),
 				'id' => 'page_len',
 				'dataIndex' => 'page_len',
 				'filter' => [ 'type' => 'numeric' ],
 				'sortable' => true,
 			], [
-				'text' => wfMessage( 'sl_last_author' )->plain(),
+				'text' => wfMessage( 'bs-wikiexplorer-last-author' )->plain(),
 				'id' => 'rev_user_text',
 				'dataIndex' => 'rev_user_text',
 				'hidden' => true,
 				'filter' => [ 'type' => 'string' ],
 				'sortable' => true,
 			], [
-				'text' => wfMessage( 'sl_categories' )->plain(),
+				'text' => wfMessage( 'bs-wikiexplorer-categories' )->plain(),
 				'id' => 'page_categories',
 				'dataIndex' => 'page_categories',
 				'hidden' => true,
 				'filter' => [ 'type' => 'string' ],
 				'sortable' => true,
 			], [
-				'text' => wfMessage( 'sl_linked_files' )->plain(),
+				'text' => wfMessage( 'bs-wikiexplorer-linked-files' )->plain(),
 				'id' => 'page_linked_files',
 				'dataIndex' => 'page_linked_files',
 				'hidden' => true,
 				'filter' => [ 'type' => 'string' ],
 				'sortable' => true,
 			], [
-				'text' => wfMessage( 'sl_linked_pages' )->plain(),
+				'text' => wfMessage( 'bs-wikiexplorer-linked-pages' )->plain(),
 				'id' => 'page_links',
 				'dataIndex' => 'page_links',
 				'hidden' => true,

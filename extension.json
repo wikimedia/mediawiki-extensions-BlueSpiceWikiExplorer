@@ -52,24 +52,6 @@
 			"scripts": [
 				"bluespice.wikiExplorer.js"
 			],
-			"messages": [
-				"bs-wikiexplorer-labelColumns",
-				"bs-wikiexplorer-labelSortAsc",
-				"bs-wikiexplorer-labelSortDesc",
-				"bs-wikiexplorer-labelPageSizeInput",
-				"bs-wikiexplorer-labelDisplayMsg",
-				"bs-wikiexplorer-labelEmptyMsg",
-				"bs-wikiexplorer-labelBeforePageText",
-				"bs-wikiexplorer-labelAfterPageText",
-				"bs-wikiexplorer-labelRefreshText",
-				"bs-wikiexplorer-labelFilters",
-				"bs-wikiexplorer-labelEquals",
-				"bs-wikiexplorer-labelEqualsNot",
-				"bs-wikiexplorer-labelContains",
-				"bs-wikiexplorer-labelContainsNot",
-				"bs-wikiexplorer-labelStartsWith",
-				"bs-wikiexplorer-labelEndsWith"
-			],
 			"dependencies": "ext.bluespice.extjs"
 		},
 		"ext.bluespice.wikiExplorer.styles": {

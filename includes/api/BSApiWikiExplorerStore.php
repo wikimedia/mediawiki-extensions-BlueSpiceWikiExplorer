@@ -40,7 +40,8 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	 * @param array &$aData
 	 * @return bool
 	 */
-	public static function onBeforeQuery( $oInstance, $sQuery, $aFilter, &$aTables, &$aFields, &$aConditions, &$aOptions, &$aJoinOptions, &$aData ) {
+	public static function onBeforeQuery( $oInstance, $sQuery, $aFilter, &$aTables, &$aFields,
+		&$aConditions, &$aOptions, &$aJoinOptions, &$aData ) {
 		\Hooks::run( 'BlueSpice\WikiExplorer\Extension::queryPagesWithFilter', [
 			$aFilter,
 			&$aTables,
@@ -317,8 +318,10 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	public function makeData( $sQuery = '' ) {
 		// DEPRECATED! Legacy query building - Please do not use!
 		global $wgHooks;
-		$wgHooks['BSApiExtJSDBTableStoreBeforeQuery'][] = "BSApiWikiExplorerStore::onBeforeQuery";
-		$wgHooks['WikiExplorer::getColumnDefinitions'][] = "BSApiWikiExplorerStore::onGetColumnDefinitions";
+		$wgHooks['BSApiExtJSDBTableStoreBeforeQuery'][]
+			= "BSApiWikiExplorerStore::onBeforeQuery";
+		$wgHooks['WikiExplorer::getColumnDefinitions'][]
+			= "BSApiWikiExplorerStore::onGetColumnDefinitions";
 
 		set_time_limit( 120 );
 		$aData = parent::makeData( $sQuery );

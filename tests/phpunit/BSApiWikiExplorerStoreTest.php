@@ -3,6 +3,7 @@
 use BlueSpice\Tests\BSApiExtJSStoreTestBase;
 
 /**
+ * @group Broken
  * @group medium
  * @group api
  * @group BlueSpice

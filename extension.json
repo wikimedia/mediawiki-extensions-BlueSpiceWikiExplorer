@@ -1,0 +1,87 @@
+{
+	"name": "BlueSpiceWikiExplorer",
+	"version": "3.1.1",
+	"license-name": "GPL-3.0-only",
+	"url": "https://en.wiki.bluespice.com/wiki/Reference:WikiExplorer",
+	"author": [
+		"Sebastian Ulbricht",
+		"Patric Wirth"
+	],
+	"descriptionmsg": "bs-wikiexplorer-extension-description",
+	"type": "bluespice",
+	"attributes": {
+		"BlueSpiceFoundation": {
+			"Extensions": {
+				"BlueSpiceWikiExplorer": {
+					"className": "\\BlueSpice\\WikiExplorer\\Extension",
+					"extPath": "/BlueSpiceWikiExplorer",
+					"package": "BlueSpice Pro"
+				}
+			}
+		}
+	},
+	"APIModules": {
+		"bs-wikiexplorer-store": "BSApiWikiExplorerStore"
+	},
+	"SpecialPages": {
+		"WikiExplorer": "SpecialWikiExplorer"
+	},
+	"MessagesDirs": {
+		"BlueSpiceWikiExplorer": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"WikiExplorerAlias": "languages/SpecialWikiExplorer.alias.php"
+	},
+	"AutoloadNamespaces": {
+		"BlueSpice\\WikiExplorer\\": "src/"
+	},
+	"AutoloadClasses": {
+		"BSApiWikiExplorerStore": "includes/api/BSApiWikiExplorerStore.php",
+		"SpecialWikiExplorer": "includes/specials/SpecialWikiExplorer.php"
+	},
+	"ResourceModules": {
+		"ext.bluespice.wikiExplorer": {
+			"scripts": [
+				"bluespice.wikiExplorer.js"
+			],
+			"messages": [
+				"bs-wikiexplorer-labelColumns",
+				"bs-wikiexplorer-labelSortAsc",
+				"bs-wikiexplorer-labelSortDesc",
+				"bs-wikiexplorer-labelPageSizeInput",
+				"bs-wikiexplorer-labelDisplayMsg",
+				"bs-wikiexplorer-labelEmptyMsg",
+				"bs-wikiexplorer-labelBeforePageText",
+				"bs-wikiexplorer-labelAfterPageText",
+				"bs-wikiexplorer-labelRefreshText",
+				"bs-wikiexplorer-labelFilters",
+				"bs-wikiexplorer-labelEquals",
+				"bs-wikiexplorer-labelEqualsNot",
+				"bs-wikiexplorer-labelContains",
+				"bs-wikiexplorer-labelContainsNot",
+				"bs-wikiexplorer-labelStartsWith",
+				"bs-wikiexplorer-labelEndsWith"
+			],
+			"dependencies": "ext.bluespice.extjs"
+		},
+		"ext.bluespice.wikiExplorer.styles": {
+			"styles": [
+				"bluespice.wikiExplorer.icons.less",
+				"bluespice.wikiExplorer.less"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "BlueSpiceWikiExplorer/resources"
+	},
+	"Hooks": {
+		"SkinTemplateOutputPageBeforeExec": "\\BlueSpice\\WikiExplorer\\Hook\\SkinTemplateOutputPageBeforeExec\\AddWikiExplorer::callback",
+		"UnitTestsList" : "\\BlueSpice\\WikiExplorer\\Extension::onUnitTestsList",
+		"BSUserSidebarGlobalActionsWidgetGlobalActions" : "WikiExplorer::onBSUserSidebarGlobalActionsWidgetGlobalActions",
+		"BeforePageDisplay": "\\BlueSpice\\WikiExplorer\\Hook\\BeforePageDisplay\\AddModuleStyles::callback"
+	},
+	"manifest_version": 2
+}

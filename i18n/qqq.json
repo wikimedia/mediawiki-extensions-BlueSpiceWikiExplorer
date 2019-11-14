@@ -1,0 +1,7 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"apihelp-bs-wikiexplorer-store-description": "Description of the API endpoint that provides all data for the extension WikiExplorer",
+	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "Description of the API parameter to indicate whether the MetaData has already been loaded."
+}

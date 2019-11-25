@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu",
+			"Mansil alfalb"
+		]
+	},
+	"bs-wikiexplorer-extension-description": "Ordenar artigos por critérios",
+	"bs-wikiexplorer-page-title": "Título",
+	"bs-wikiexplorer-page-namespace": "Espaço nominal",
+	"bs-wikiexplorer-creation-date": "Data de criação",
+	"bs-wikiexplorer-last-comment": "Último comentário",
+	"bs-wikiexplorer-last-edit-time": "Data da última edição",
+	"bs-wikiexplorer-page-size": "Tamanho",
+	"bs-wikiexplorer-last-author": "Último editor",
+	"bs-wikiexplorer-categories": "Categorias",
+	"bs-wikiexplorer-linked-files": "Ficheiros hiperligados",
+	"bs-wikiexplorer-linked-pages": "Páginas hiperligadas"
+}

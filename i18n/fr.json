@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"Verdy p"
 		]
 	},
 	"bs-wikiexplorer-extension-description": "Trier les articles par critères",
@@ -12,7 +13,7 @@
 	"bs-wikiexplorer-last-comment": "Dernier commentaire",
 	"bs-wikiexplorer-last-edit-time": "Dernière date de modification",
 	"bs-wikiexplorer-page-size": "Taille",
-	"bs-wikiexplorer-last-author": "Dernier éditeur",
+	"bs-wikiexplorer-last-author": "Dernier modificateur",
 	"bs-wikiexplorer-categories": "Catégories",
 	"bs-wikiexplorer-linked-files": "Fichiers liés",
 	"bs-wikiexplorer-linked-pages": "Pages liées",

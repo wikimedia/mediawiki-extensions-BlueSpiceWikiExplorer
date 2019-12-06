@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ykhwong"
+		]
+	},
+	"bs-wikiexplorer-page-title": "제목",
+	"bs-wikiexplorer-page-namespace": "이름공간",
+	"bs-wikiexplorer-creation-date": "만든 날짜",
+	"bs-wikiexplorer-is-redirect": "넘겨주기 여부",
+	"bs-wikiexplorer-last-edit-time": "마지막 편집일",
+	"bs-wikiexplorer-page-size": "크기",
+	"bs-wikiexplorer-last-author": "마지막 편집자",
+	"bs-wikiexplorer-categories": "분류"
+}

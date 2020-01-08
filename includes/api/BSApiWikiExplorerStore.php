@@ -167,7 +167,6 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 
 	/**
 	 * Get the ExtJS grid config, if not already loaded. TODO: Change this!
-	 * @global WebRequest $wgRequest
 	 * @return array
 	 */
 	public function getMetaData() {
@@ -311,7 +310,6 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 
 	/**
 	 * C&p of WikiExplorer::getData()
-	 * @global WebRequest $wgRequest
 	 * @param string $sQuery
 	 * @return array
 	 */

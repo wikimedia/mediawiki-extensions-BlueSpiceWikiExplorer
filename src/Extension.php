@@ -163,15 +163,4 @@ class Extension extends \BlueSpice\Extension {
 		return $aColumns;
 	}
 
-	/**
-	 * Hook handler for UnitTestList
-	 *
-	 * @param array &$paths
-	 * @return bool
-	 */
-	public static function onUnitTestsList( &$paths ) {
-		$paths[] = __DIR__ . '/tests/phpunit/';
-		return true;
-	}
-
 }

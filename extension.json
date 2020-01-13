@@ -67,7 +67,6 @@
 	},
 	"Hooks": {
 		"SkinTemplateOutputPageBeforeExec": "\\BlueSpice\\WikiExplorer\\Hook\\SkinTemplateOutputPageBeforeExec\\AddWikiExplorer::callback",
-		"UnitTestsList" : "\\BlueSpice\\WikiExplorer\\Extension::onUnitTestsList",
 		"BSUserSidebarGlobalActionsWidgetGlobalActions" : "WikiExplorer::onBSUserSidebarGlobalActionsWidgetGlobalActions",
 		"BeforePageDisplay": "\\BlueSpice\\WikiExplorer\\Hook\\BeforePageDisplay\\AddModuleStyles::callback"
 	},

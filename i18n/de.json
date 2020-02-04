@@ -3,7 +3,8 @@
 		"authors": [
 			"Sebastian Ulbricht",
 			"Markus Glaser",
-			"Robert Vogel"
+			"Robert Vogel",
+			"Schmackes"
 		]
 	},
 	"bs-wikiexplorer-extension-description": "Artikel nach Kriterien sortieren lassen",
@@ -20,5 +21,6 @@
 	"bs-wikiexplorer-linked-files": "verlinkte Dateien",
 	"bs-wikiexplorer-linked-pages": "verlinkte Seiten",
 	"apihelp-bs-wikiexplorer-store-description": "Bietet alle Daten für die Erweiterung WikiExplorer",
-	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "API-Parameter zur Anzeige, ob die MetaDaten bereits geladen wurden."
+	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "API-Parameter zur Anzeige, ob die MetaDaten bereits geladen wurden.",
+	"apihelp-bs-wikiexplorer-store-summary": "Stellt alle Daten für die Erweiterung WikiExplorer bereit"
 }

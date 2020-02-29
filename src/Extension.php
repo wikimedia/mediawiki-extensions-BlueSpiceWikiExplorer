@@ -14,9 +14,9 @@ class Extension extends \BlueSpice\Extension {
 	 */
 	public function onBSUserSidebarGlobalActionsWidgetGlobalActions( UserSidebar $oUserSidebar,
 		User $oUser, &$aLinks, &$sWidgetTitle ) {
-		$oSpecialWikiExplorer = SpecialPageFactory::getPage(
-				'WikiExplorer'
-		);
+		$oSpecialWikiExplorer = \MediaWiki\MediaWikiServices::getInstance()
+			->getSpecialPageFactory()
+			->getPage( 'WikiExplorer' );
 		if ( !$oSpecialWikiExplorer ) {
 			return true;
 		}

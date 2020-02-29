@@ -8,7 +8,9 @@ use BlueSpice\SkinData;
 class AddWikiExplorer extends SkinTemplateOutputPageBeforeExec {
 
 	protected function doProcess() {
-		$specialWikiExplorer = \SpecialPageFactory::getPage( 'WikiExplorer' );
+		$specialWikiExplorer = \MediaWiki\MediaWikiServices::getInstance()
+			->getSpecialPageFactory()
+			->getPage( 'WikiExplorer' );
 		$this->mergeSkinDataArray(
 			SkinData::GLOBAL_ACTIONS,
 			[

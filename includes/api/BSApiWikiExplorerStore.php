@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * This class serves as a backend for the wiki explorer store.
  *
@@ -191,10 +194,9 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	 * @return array
 	 */
 	public function makeTables( $sQuery, $aFilter ) {
-		return [
-			'page',
-			'revision',
-		];
+		$query = MediaWikiServices::getInstance()->getRevisionStore()->getQueryInfo();
+		$query['tables'][] = 'page';
+		return $query['tables'];
 	}
 
 	/**
@@ -204,14 +206,13 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	 * @return array
 	 */
 	public function makeFields( $sQuery, $aFilter ) {
-		return array_merge( parent::makeFields( $sQuery, $aFilter ), [
+		$query = MediaWikiServices::getInstance()->getRevisionStore()->getQueryInfo();
+		return array_merge( parent::makeFields( $sQuery, $aFilter ), $query['fields'], [
 			'page_is_redirect',
 			'page_is_new',
 			'page_touched',
 			'page_len',
 			'page_latest',
-			'rev_comment',
-			'rev_user_text',
 		] );
 	}
 
@@ -244,9 +245,9 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	 * @return array
 	 */
 	public function makeJoinOptions( $sQuery, $aFilter ) {
-		return [
-			'revision' => [ 'LEFT JOIN', 'page_latest = rev_id' ],
-		];
+		$query = MediaWikiServices::getInstance()->getRevisionStore()->getQueryInfo();
+		$query['joins']['revision'] = [ 'LEFT JOIN', 'page_latest = rev_id' ];
+		return $query['joins'];
 	}
 
 	/**

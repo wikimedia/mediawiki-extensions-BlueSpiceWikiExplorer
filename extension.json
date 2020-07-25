@@ -66,7 +66,7 @@
 		"remoteExtPath": "BlueSpiceWikiExplorer/resources"
 	},
 	"Hooks": {
-		"SkinTemplateOutputPageBeforeExec": "\\BlueSpice\\WikiExplorer\\Hook\\SkinTemplateOutputPageBeforeExec\\AddWikiExplorer::callback",
+		"ChameleonSkinTemplateOutputPageBeforeExec": "\\BlueSpice\\WikiExplorer\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\AddWikiExplorer::callback",
 		"BSUserSidebarGlobalActionsWidgetGlobalActions" : "WikiExplorer::onBSUserSidebarGlobalActionsWidgetGlobalActions",
 		"BeforePageDisplay": "\\BlueSpice\\WikiExplorer\\Hook\\BeforePageDisplay\\AddModuleStyles::callback"
 	},

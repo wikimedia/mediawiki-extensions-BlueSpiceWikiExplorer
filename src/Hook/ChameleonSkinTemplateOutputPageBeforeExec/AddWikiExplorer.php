@@ -1,11 +1,11 @@
 <?php
 
-namespace BlueSpice\WikiExplorer\Hook\SkinTemplateOutputPageBeforeExec;
+namespace BlueSpice\WikiExplorer\Hook\ChameleonSkinTemplateOutputPageBeforeExec;
 
-use BlueSpice\Hook\SkinTemplateOutputPageBeforeExec;
+use BlueSpice\Calumma\Hook\ChameleonSkinTemplateOutputPageBeforeExec;
 use BlueSpice\SkinData;
 
-class AddWikiExplorer extends SkinTemplateOutputPageBeforeExec {
+class AddWikiExplorer extends ChameleonSkinTemplateOutputPageBeforeExec {
 
 	protected function doProcess() {
 		$specialWikiExplorer = \MediaWiki\MediaWikiServices::getInstance()

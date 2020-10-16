@@ -42,7 +42,7 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	 */
 	public static function onBeforeQuery( $oInstance, $sQuery, $aFilter, &$aTables, &$aFields,
 		&$aConditions, &$aOptions, &$aJoinOptions, &$aData ) {
-		\Hooks::run( 'BlueSpice\WikiExplorer\Extension::queryPagesWithFilter', [
+		\Hooks::run( 'WikiExplorer::queryPagesWithFilter', [
 			$aFilter,
 			&$aTables,
 			&$aFields,
@@ -328,7 +328,21 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 		if ( empty( $aData ) ) {
 			return $aData;
 		}
-		return $this->extendRows( $aData );
+
+		// DEPRECATED! Legacy data set building - Please do not use! Get rid of
+		// this as soon as possible!
+		$aDeprecatedData = [];
+		foreach ( $aData as $iKey => $oRow ) {
+			$aDeprecatedData[$oRow->page_id] = (array)$oRow;
+		}
+		\Hooks::run( 'WikiExplorer::buildDataSets', [
+			&$aDeprecatedData
+		] );
+		foreach ( $aDeprecatedData as $iKey => $aRow ) {
+			$aDeprecatedData[$iKey] = (object)$aRow;
+		}
+
+		return $this->extendRows( $aDeprecatedData );
 	}
 
 	/**

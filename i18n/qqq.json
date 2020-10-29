@@ -2,15 +2,16 @@
 	"@metadata": {
 		"authors": [
 			"BaRaN6161 TURK",
+			"MuratTheTurkish",
 			"Patric Wirth",
 			"Umherirrender"
 		]
 	},
 	"bs-wikiexplorer-extension-description": "{{desc|name=BlueSpiceWikiExplorer}}",
-	"wikiexplorer": "Special page name for [[Special:WikiExplorer]] special page.\n{{notranslate}}",
+	"wikiexplorer": "{{doc-special}}\n{{optional}}",
 	"bs-wikiexplorer-page-title": "Short label for row in ExtJS manager that displays the page title.\n{{Identical|Title}}",
 	"bs-wikiexplorer-page-namespace": "Short label for row in ExtJS manager that displays the page namespace.\n{{Identical|Namespace}}",
-	"bs-wikiexplorer-creation-date": "Short label for row in ExtJS manager that displays the pages creation date.\n{{Identical|Creation date}}",
+	"bs-wikiexplorer-creation-date": "Short label for row in ExtJS manager that displays the pages creation date.",
 	"bs-wikiexplorer-is-redirect": "Short label for row in ExtJS manager that displays if the page is a redirect.\n{{Identical|Is redirect}}",
 	"bs-wikiexplorer-last-comment": "Short label for row in ExtJS manager that displays the pages last edit comment.\n{{Identical|Last comment}}",
 	"bs-wikiexplorer-last-edit-time": "Short label for row in ExtJS manager that displays the pages last edit date.\n{{Identical|Last edit date}}",

@@ -45,13 +45,16 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	 */
 	public static function onBeforeQuery( $oInstance, $sQuery, $aFilter, &$aTables, &$aFields,
 		&$aConditions, &$aOptions, &$aJoinOptions, &$aData ) {
-		\Hooks::run( 'WikiExplorer::queryPagesWithFilter', [
-			$aFilter,
-			&$aTables,
-			&$aFields,
-			&$aConditions,
-			&$aJoinOptions
-		] );
+		MediaWikiServices::getInstance()->getHookContainer()->run(
+			'WikiExplorer::queryPagesWithFilter',
+			[
+				$aFilter,
+				&$aTables,
+				&$aFields,
+				&$aConditions,
+				&$aJoinOptions
+			]
+		);
 
 		$aTables = array_unique( $aTables );
 		$aFields = array_unique( $aFields );
@@ -257,7 +260,14 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	 * @return array
 	 */
 	public function postProcessData( $aData ) {
-		if ( !\Hooks::run( 'BSApiExtJSStoreBaseBeforePostProcessData', [ $this, &$aData ] ) ) {
+		$res = $this->getServices()->getHookContainer()->run(
+			'BSApiExtJSStoreBaseBeforePostProcessData',
+			[
+				$this,
+				&$aData
+			]
+		);
+		if ( !$res ) {
 			return $aData;
 		}
 
@@ -268,7 +278,7 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 			$aData,
 			[ $this, 'filterCallback' ]
 		);
-		\Hooks::run( 'BSApiExtJSStoreBaseAfterFilterData', [
+		$this->getServices()->getHookContainer()->run( 'BSApiExtJSStoreBaseAfterFilterData', [
 			$this,
 			&$aProcessedData
 		] );
@@ -334,7 +344,7 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 		foreach ( $aData as $iKey => $oRow ) {
 			$aDeprecatedData[$oRow->page_id] = (array)$oRow;
 		}
-		\Hooks::run( 'WikiExplorer::buildDataSets', [
+		$this->getServices()->getHookContainer()->run( 'WikiExplorer::buildDataSets', [
 			&$aDeprecatedData
 		] );
 		foreach ( $aDeprecatedData as $iKey => $aRow ) {
@@ -377,11 +387,14 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 
 			// Check possible custom filters
 			$bResult = true;
-			$bReturn = Hooks::run( 'WikiExplorerStoreFilterCallbck', [
-				$aDataSet,
-				$oFilter,
-				&$bResult,
-			] );
+			$bReturn = $this->getServices()->getHookContainer()->run(
+				'WikiExplorerStoreFilterCallbck',
+				[
+					$aDataSet,
+					$oFilter,
+					&$bResult,
+				]
+			);
 			// Force return true when hook handler gets abborted.
 			// Also return false result immediately
 			if ( !$bReturn || !$bResult ) {

@@ -2,6 +2,8 @@
 
 namespace BlueSpice\WikiExplorer;
 
+use MediaWiki\MediaWikiServices;
+
 class Extension extends \BlueSpice\Extension {
 
 	/**
@@ -67,9 +69,12 @@ class Extension extends \BlueSpice\Extension {
 			'columns' => self::getColumnDefinitions(),
 		];
 
-		\Hooks::run( 'WikiExplorer::getFieldDefinitions', [
-			&$output['fields'],
-		] );
+		MediaWikiServices::getInstance()->getHookContainer()->run(
+			'WikiExplorer::getFieldDefinitions',
+			[
+				&$output['fields'],
+			]
+		);
 
 		return $output;
 	}
@@ -156,9 +161,12 @@ class Extension extends \BlueSpice\Extension {
 				'sortable' => true,
 			] ];
 
-		\Hooks::run( 'WikiExplorer::getColumnDefinitions', [
-			&$aColumns,
-		] );
+		MediaWikiServices::getInstance()->getHookContainer()->run(
+			'WikiExplorer::getColumnDefinitions',
+			[
+				&$aColumns,
+			]
+		);
 
 		return $aColumns;
 	}

@@ -111,21 +111,6 @@ BSWikiExplorer.renderPrototypes = {
 	}
 };
 
-WikiExplorerLecayRender_page_assignments = function( name, meta, record ) {
-	if( record.get( 'page_assignments' ) == '' ) {
-		return record.get( 'page_assignments' );
-	}
-	var aAssignments = record.get( 'page_assignments' ).split(',');
-	var sOut = '<ul>';
-	for ( var i = 0; i < aAssignments.length; i++ ) {
-		if( !aAssignments[i] ) {
-			continue;
-		}
-		sOut = sOut + '<li>' + aAssignments[i] + '</li>';
-	}
-	sOut = sOut + '</ul>';
-	return sOut;
-}
 WikiExplorerLecayRender_flaggedrevs_state = function( name, meta, record ) {
 	var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/{0}"/>';
 	if ( record.get( 'flaggedrevs_state' ) == 0 ) {

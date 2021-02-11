@@ -111,7 +111,10 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 		if ( !$row ) {
 			return $row;
 		}
-		$row->page_created = Title::newFromRow( $row )->getEarliestRevTime();
+		$revisionLookup = MediaWikiServices::getInstance()->getRevisionLookup();
+		$revisionRecord = $revisionLookup->getFirstRevision( Title::newFromRow( $row ) );
+
+		$row->page_created = $revisionRecord ? $revisionRecord->getTimestamp() : null;
 		$row->page_categories = [];
 		$row->page_links = [];
 		$row->page_linked_files = [];

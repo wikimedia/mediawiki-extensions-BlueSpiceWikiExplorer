@@ -324,7 +324,14 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 			= "BSApiWikiExplorerStore::onGetColumnDefinitions";
 
 		set_time_limit( 120 );
-		$aData = parent::makeData( $sQuery );
+		global $wgRequest;
+		$metaLoaded = $wgRequest->getVal( 'metaLoaded', 'false' );
+		// Handle booleans from ExtJs
+		if ( !$metaLoaded || $metaLoaded == 'false' ) {
+			$aData = [];
+		} else {
+			$aData = parent::makeData( $sQuery );
+		}
 		if ( empty( $aData ) ) {
 			return $aData;
 		}

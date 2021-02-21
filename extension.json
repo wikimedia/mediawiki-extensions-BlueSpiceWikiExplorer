@@ -67,7 +67,7 @@
 	},
 	"Hooks": {
 		"ChameleonSkinTemplateOutputPageBeforeExec": "\\BlueSpice\\WikiExplorer\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\AddWikiExplorer::callback",
-		"BSUserSidebarGlobalActionsWidgetGlobalActions" : "WikiExplorer::onBSUserSidebarGlobalActionsWidgetGlobalActions",
+		"BSUserSidebarGlobalActionsWidgetGlobalActions": "WikiExplorer::onBSUserSidebarGlobalActionsWidgetGlobalActions",
 		"BeforePageDisplay": "\\BlueSpice\\WikiExplorer\\Hook\\BeforePageDisplay\\AddModuleStyles::callback"
 	},
 	"manifest_version": 2

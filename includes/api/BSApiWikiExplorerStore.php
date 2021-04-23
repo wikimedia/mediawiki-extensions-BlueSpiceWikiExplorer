@@ -31,6 +31,42 @@ use MediaWiki\MediaWikiServices;
 class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 
 	/**
+	 * Page ID to its first revision timestamp mapping.
+	 *
+	 * @var array
+	 */
+	private $pageFirstRevisionTimestamp = [];
+
+	/**
+	 * Gets timestamp of first revision for each wiki page existing.
+	 *
+	 * @return array Page ID to its first revision timestamp mapping
+	 * @see \BSApiWikiExplorerStore::makeData()
+	 */
+	private function getPagesFirstRevisionTimestamps() {
+		$pagesFirstRevisions = $this->getDB()->select(
+			[ 'page', 'revision' ],
+			[ 'page_id', 'rev_timestamp' ],
+			'rev_parent_id=0',
+			__METHOD__,
+			[],
+			[
+				'revision' => [
+					'INNER JOIN',
+					'page.page_id=revision.rev_page'
+				]
+			]
+		);
+
+		$pageFirstRevisionTimestamp = [];
+		foreach ( $pagesFirstRevisions as $row ) {
+			$pageFirstRevisionTimestamp[$row->page_id] = $row->rev_timestamp;
+		}
+
+		return $pageFirstRevisionTimestamp;
+	}
+
+	/**
 	 *
 	 * @param Instance $oInstance
 	 * @param Query $sQuery
@@ -101,6 +137,22 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	}
 
 	/**
+	 * @inheritDoc
+	 */
+	protected function checkDatasetPermission( Title $title ) {
+		// For optimization reasons:
+
+		// Even in case if user will see some pages he does not have access to - user's
+		// permissions will anyway be checked when redirecting to particular page.
+		// And if user does not have read permission - it will be denied.
+
+		// So we do not need to check read permissions in WikiExplorer.
+		// Thus it's expensive operation and will be done for each of thousands pages - it can be omitted.
+
+		return true;
+	}
+
+	/**
 	 *
 	 * @param Row $row
 	 * @return type
@@ -111,10 +163,8 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 		if ( !$row ) {
 			return $row;
 		}
-		$revisionLookup = MediaWikiServices::getInstance()->getRevisionLookup();
-		$revisionRecord = $revisionLookup->getFirstRevision( Title::newFromRow( $row ) );
 
-		$row->page_created = $revisionRecord ? $revisionRecord->getTimestamp() : null;
+		$row->page_created = $this->pageFirstRevisionTimestamp[$row->page_id];
 		$row->page_categories = [];
 		$row->page_links = [];
 		$row->page_linked_files = [];
@@ -342,6 +392,8 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 		if ( !$metaLoaded || $metaLoaded == 'false' ) {
 			$aData = [];
 		} else {
+			$this->pageFirstRevisionTimestamp = $this->getPagesFirstRevisionTimestamps();
+
 			$aData = parent::makeData( $sQuery );
 		}
 		if ( empty( $aData ) ) {

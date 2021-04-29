@@ -44,13 +44,13 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 		$pagesFirstRevisions = $this->getDB()->select(
 			[ 'page', 'revision' ],
 			[ 'page_id', 'rev_timestamp' ],
-			'rev_parent_id=0',
+			[ 'rev_parent_id' => 0 ],
 			__METHOD__,
 			[],
 			[
 				'revision' => [
 					'INNER JOIN',
-					'page.page_id=revision.rev_page'
+					'page_id=rev_page'
 				]
 			]
 		);

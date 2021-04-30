@@ -113,10 +113,13 @@ BSWikiExplorer.renderPrototypes = {
 
 WikiExplorerLecayRender_flaggedrevs_state = function( name, meta, record ) {
 	var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/{0}"/>';
-	if ( record.get( 'flaggedrevs_state' ) == 0 ) {
+	if ( (  record.get( 'is_flaggedrevs_enabled' ) == 1 ) && ( record.get( 'flaggedrevs_state' ) == 0 ) ) {
 		return icon.format( 'bs-cross.png' );
 	}
-	return icon.format( 'bs-tick.png' );
+	if ( (  record.get( 'is_flaggedrevs_enabled' ) == 1 ) && ( record.get( 'flaggedrevs_state' ) == 1 ) ) {
+		return icon.format( 'bs-tick.png' );
+	}
+	return '';
 }
 WikiExplorerLecayRender_flaggedrevs_date = function( name, meta, record ) {
 	if( !record.get( 'flaggedrevs_date' ) || record.get( 'flaggedrevs_date' ) == '' ) {

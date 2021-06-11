@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mjälten"
+			"Mjälten",
+			"Sabelöga"
 		]
 	},
 	"bs-wikiexplorer-page-title": "Titel",
@@ -11,5 +12,12 @@
 	"bs-wikiexplorer-last-author": "Senaste redigerare",
 	"bs-wikiexplorer-categories": "Kategorier",
 	"bs-wikiexplorer-linked-files": "Länkade sidor",
-	"bs-wikiexplorer-linked-pages": "Länkade sidor"
+	"bs-wikiexplorer-linked-pages": "Länkade sidor",
+	"bs-wikiexplorer-extension-description": "Sortera artiklar efter kriterium",
+	"bs-wikiexplorer-is-redirect": "Är en omdirigering",
+	"bs-wikiexplorer-last-comment": "Senaste kommentar",
+	"bs-wikiexplorer-last-edit-time": "Senaste redigeringsdatum",
+	"apihelp-bs-wikiexplorer-store-description": "Erbjuder all data för tillägget WikiExplorer",
+	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "API-parameter för att ange om MetaData redan har laddats.",
+	"apihelp-bs-wikiexplorer-store-summary": "Erbjuder all data för tillägget WikiExplorer"
 }

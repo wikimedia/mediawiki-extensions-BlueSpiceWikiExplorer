@@ -424,29 +424,7 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	public function filterCallback( $aDataSet ) {
 		set_time_limit( 120 );
 		$aFilter = $this->getParameter( 'filter' );
-		$aArrayFilters = [
-			'page_categories',
-			'page_links',
-			'page_linked_files',
-		];
 		foreach ( $aFilter as $oFilter ) {
-			if ( !isset( $oFilter->field ) && isset( $oFilter->property ) ) {
-				$oFilter->field = $oFilter->property;
-			}
-			if ( !isset( $oFilter->comparison ) && isset( $oFilter->operator ) ) {
-				$oFilter->comparison = $oFilter->operator;
-			}
-
-			if ( empty( $oFilter->type ) ) {
-				continue;
-			}
-			if ( !isset( $oFilter->field ) ) {
-				if ( !isset( $oFilter->property ) ) {
-					continue;
-				}
-				$oFilter->field = $oFilter->property;
-			}
-
 			// Check possible custom filters
 			$bResult = true;
 			$bReturn = $this->getServices()->getHookContainer()->run(
@@ -457,43 +435,58 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 					&$bResult,
 				]
 			);
+
 			// Force return true when hook handler gets abborted.
 			// Also return false result immediately
 			if ( !$bReturn || !$bResult ) {
 				return $bResult;
 			}
-
-			if ( in_array( $oFilter->field, $aArrayFilters ) ) {
-				foreach ( $aDataSet->{$oFilter->field} as $sValue ) {
-					$bRes = $this->filterString(
-						$oFilter,
-						(object)[ $oFilter->field => $sValue ]
-					);
-					if ( !$bRes ) {
-						continue;
-					}
-					return true;
-				}
-				return false;
-			}
-
-			// Check namespace names instead of index numbers
-			if ( $oFilter->field === 'page_namespace' ) {
-				$sNs = BsNamespaceHelper::getNamespaceName(
-					$aDataSet->{$oFilter->field}
-				);
-				$bRes = $this->filterString(
-					$oFilter,
-					(object)[ $oFilter->field => $sNs ]
-				);
-				if ( $bRes ) {
-					return true;
-				}
-				// Do not return false jet. Also check namespace indexes as well
-				return parent::filterCallback( $aDataSet );
-			}
 		}
 
 		return parent::filterCallback( $aDataSet );
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function filterString( $oFilter, $aDataSet ) {
+		$aArrayFilters = [
+			'page_categories',
+			'page_links',
+			'page_linked_files',
+		];
+		if ( in_array( $oFilter->field, $aArrayFilters ) ) {
+			$matches = false;
+			foreach ( $aDataSet->{$oFilter->field} as $sValue ) {
+				$bRes = parent::filterString(
+					$oFilter,
+					(object)[ $oFilter->field => $sValue ]
+				);
+				if ( !$bRes ) {
+					continue;
+				}
+				$matches = true;
+			}
+
+			return $matches;
+		}
+
+		// Check namespace names instead of index numbers
+		if ( $oFilter->field === 'page_namespace' ) {
+			$sNs = BsNamespaceHelper::getNamespaceName(
+				$aDataSet->{$oFilter->field}
+			);
+			$bRes = parent::filterString(
+				$oFilter,
+				(object)[ $oFilter->field => $sNs ]
+			);
+			if ( !$bRes ) {
+				return false;
+			}
+
+			return true;
+		}
+
+		return parent::filterString( $oFilter, $aDataSet );
 	}
 }

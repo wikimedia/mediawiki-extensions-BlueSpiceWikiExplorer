@@ -206,8 +206,6 @@ mw.loader.using( 'ext.bluespice.extjs', function() {
 							columns: columns,
 							plugins: 'gridfilters',
 							renderTo: 'superlist_grid',
-							stateful: true,
-							stateId: 'BsSuperlistGrid',
 							cls: 'bs-extjs-crud-grid',
 							autoHeight: true,
 							tbar: new Ext.toolbar.Toolbar({

@@ -13,5 +13,7 @@
 	"bs-wikiexplorer-page-size": "크기",
 	"bs-wikiexplorer-last-author": "마지막 편집자",
 	"bs-wikiexplorer-categories": "분류",
+	"bs-wikiexplorer-linked-files": "링크된 파일",
+	"bs-wikiexplorer-linked-pages": "링크된 문서",
 	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "메타데이터가 이미 로드되었는지 여부를 확인하기 위한 API 변수입니다."
 }

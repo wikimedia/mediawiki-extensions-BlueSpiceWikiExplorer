@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"DDPAT",
 			"Piramidion"
 		]
 	},
 	"bs-wikiexplorer-extension-description": "Сортувати статті за критеріями",
+	"wikiexplorer": "WikiExplorer",
 	"bs-wikiexplorer-page-title": "Назва",
 	"bs-wikiexplorer-page-namespace": "Простір назв",
 	"bs-wikiexplorer-creation-date": "Дата створення",

@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajeje Brazorf"
+			"Ajeje Brazorf",
+			"Stefano"
 		]
 	},
-	"bs-wikiexplorer-page-namespace": "Namespace"
+	"bs-wikiexplorer-page-title": "Titolo",
+	"bs-wikiexplorer-page-namespace": "Namespace",
+	"bs-wikiexplorer-creation-date": "Data di creazione",
+	"bs-wikiexplorer-categories": "Categorie",
+	"bs-wikiexplorer-linked-pages": "Pagine collegate"
 }

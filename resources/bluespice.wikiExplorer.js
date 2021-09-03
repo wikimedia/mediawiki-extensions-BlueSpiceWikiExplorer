@@ -67,11 +67,11 @@ BSWikiExplorer.renderPrototypes = {
 		return Ext.util.Format.fileSize( record.get( 'page_len' ) );
 	},
 	page_is_redirect: function( name, meta, record ) {
-		var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/{0}"/>';
+		var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/bs-{0}.png" alt="Icon {0}"/>';
 		if ( record.get( 'page_is_redirect' ) == 0 ) {
-			return icon.format( 'bs-cross.png' );
+			return icon.format( 'cross' );
 		}
-		return icon.format( 'bs-tick.png' );
+		return icon.format( 'tick' );
 	},
 	page_categories: function( name, meta, record ) {
 		var sOut = '<ul class="bs-wikiexplorer-list-field">';
@@ -112,12 +112,12 @@ BSWikiExplorer.renderPrototypes = {
 };
 
 WikiExplorerLecayRender_flaggedrevs_state = function( name, meta, record ) {
-	var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/{0}"/>';
+	var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/bs-{0}.png" alt="Icon {0}"/>';
 	if ( ( record.get( 'is_flaggedrevs_enabled' ) == 1 ) && ( record.get( 'flaggedrevs_state' ) == 0 ) ) {
-		return icon.format( 'bs-cross.png' );
+		return icon.format( 'cross' );
 	}
 	if ( ( record.get( 'is_flaggedrevs_enabled' ) == 1 ) && ( record.get( 'flaggedrevs_state' ) == 1 ) ) {
-		return icon.format( 'bs-tick.png' );
+		return icon.format( 'tick' );
 	}
 	return '';
 };
@@ -140,12 +140,12 @@ WikiExplorerLecayRender_flaggedrevs_date = function( name, meta, record ) {
 };
 
 WikiExplorerLecayRender_flaggedrevs_is_new_available = function( name, meta, record ) {
-	var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/{0}"/>';
+	var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/bs-{0}.png" alt="Icon {0}"/>';
 	if ( ( record.get( 'is_flaggedrevs_enabled' ) == 1 ) && ( record.get( 'flaggedrevs_is_new_available' ) == 0 ) ) {
-		return icon.format( 'bs-cross.png' );
+		return icon.format( 'cross' );
 	}
 	if ( ( record.get( 'is_flaggedrevs_enabled' ) == 1 ) && ( record.get( 'flaggedrevs_is_new_available' ) == 1 ) ) {
-		return icon.format( 'bs-tick.png' );
+		return icon.format( 'tick' );
 	}
 	return '';
 };

@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"FarsiNevis"
+			"FarsiNevis",
+			"Jeeputer"
 		]
 	},
+	"bs-wikiexplorer-extension-description": "مرتب‌سازی مقاله‌ها بر پایه معیار",
 	"bs-wikiexplorer-page-title": "عنوان",
 	"bs-wikiexplorer-page-namespace": "فضای نام",
 	"bs-wikiexplorer-creation-date": "روز ایجاد",

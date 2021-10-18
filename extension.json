@@ -66,15 +66,15 @@
 		"remoteExtPath": "BlueSpiceWikiExplorer/resources"
 	},
 	"HookHandlers": {
-		"main": {
-			"class": "\\BlueSpice\\WikiExplorer\\HookHandler\\Main"
+		"common-user-interface": {
+			"class": "\\BlueSpice\\WikiExplorer\\HookHandler\\CommonUserInterface"
 		}
 	},
 	"Hooks": {
 		"ChameleonSkinTemplateOutputPageBeforeExec": "\\BlueSpice\\WikiExplorer\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\AddWikiExplorer::callback",
 		"BSUserSidebarGlobalActionsWidgetGlobalActions": "WikiExplorer::onBSUserSidebarGlobalActionsWidgetGlobalActions",
 		"BeforePageDisplay": "\\BlueSpice\\WikiExplorer\\Hook\\BeforePageDisplay\\AddModuleStyles::callback",
-		"MWStakeCommonUIRegisterSkinSlotComponents": "main"
+		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface"
 	},
 	"manifest_version": 2
 }

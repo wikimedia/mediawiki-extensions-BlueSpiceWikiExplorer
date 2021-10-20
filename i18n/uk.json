@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"DDPAT",
 			"Piramidion"
 		]
 	},
@@ -18,5 +19,6 @@
 	"bs-wikiexplorer-linked-pages": "Пов'язані сторінки",
 	"apihelp-bs-wikiexplorer-store-description": "Надає всі дані для розширення WikiExplorer",
 	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "Параметр API для зазначення того, чи метадані вже завантажено, чи ні.",
-	"apihelp-bs-wikiexplorer-store-summary": "Надає всі дані для розширення WikiExplorer"
+	"apihelp-bs-wikiexplorer-store-summary": "Надає всі дані для розширення WikiExplorer",
+	"wikiexplorer": "WikiExplorer"
 }

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"FarsiNevis"
+			"FarsiNevis",
+			"Jeeputer"
 		]
 	},
 	"bs-wikiexplorer-page-title": "عنوان",
@@ -12,5 +13,6 @@
 	"bs-wikiexplorer-last-edit-time": "تاریخ آخرین ویرایش",
 	"bs-wikiexplorer-page-size": "اندازه",
 	"bs-wikiexplorer-last-author": "آخرین ویرایشگر",
-	"bs-wikiexplorer-categories": "رده‌ها"
+	"bs-wikiexplorer-categories": "رده‌ها",
+	"bs-wikiexplorer-extension-description": "مرتب‌سازی مقاله‌ها بر پایه معیار"
 }

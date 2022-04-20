@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"DiegoAmbrocio",
 			"Fitoschido"
 		]
 	},
@@ -13,5 +14,8 @@
 	"bs-wikiexplorer-page-size": "Tamaño",
 	"bs-wikiexplorer-categories": "Categorías",
 	"bs-wikiexplorer-linked-files": "Archivos enlazados",
-	"bs-wikiexplorer-linked-pages": "Páginas enlazadas"
+	"bs-wikiexplorer-linked-pages": "Páginas enlazadas",
+	"bs-wikiexplorer-last-edit-time": "Fecha de la última edición",
+	"bs-wikiexplorer-last-author": "Último editor",
+	"apihelp-bs-wikiexplorer-store-description": "Proporciona todos los datos de la extensión WikiExplorer"
 }

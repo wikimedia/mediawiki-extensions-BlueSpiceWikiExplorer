@@ -250,7 +250,7 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	 * @return array
 	 */
 	public function makeTables( $sQuery, $aFilter ) {
-		$query = MediaWikiServices::getInstance()->getRevisionStore()->getQueryInfo();
+		$query = $this->services->getRevisionStore()->getQueryInfo();
 		$query['tables'][] = 'page';
 		return $query['tables'];
 	}
@@ -262,7 +262,7 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	 * @return array
 	 */
 	public function makeFields( $sQuery, $aFilter ) {
-		$query = MediaWikiServices::getInstance()->getRevisionStore()->getQueryInfo();
+		$query = $this->services->getRevisionStore()->getQueryInfo();
 		return array_merge( parent::makeFields( $sQuery, $aFilter ), $query['fields'], [
 			'page_is_redirect',
 			'page_is_new',
@@ -301,7 +301,7 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	 * @return array
 	 */
 	public function makeJoinOptions( $sQuery, $aFilter ) {
-		$query = MediaWikiServices::getInstance()->getRevisionStore()->getQueryInfo();
+		$query = $this->services->getRevisionStore()->getQueryInfo();
 		$query['joins']['revision'] = [ 'LEFT JOIN', 'page_latest = rev_id' ];
 		return $query['joins'];
 	}
@@ -313,7 +313,7 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	 * @return array
 	 */
 	public function postProcessData( $aData ) {
-		$res = $this->getServices()->getHookContainer()->run(
+		$res = $this->services->getHookContainer()->run(
 			'BSApiExtJSStoreBaseBeforePostProcessData',
 			[
 				$this,
@@ -331,7 +331,7 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 			$aData,
 			[ $this, 'filterCallback' ]
 		);
-		$this->getServices()->getHookContainer()->run( 'BSApiExtJSStoreBaseAfterFilterData', [
+		$this->services->getHookContainer()->run( 'BSApiExtJSStoreBaseAfterFilterData', [
 			$this,
 			&$aProcessedData
 		] );
@@ -406,7 +406,7 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 		foreach ( $aData as $iKey => $oRow ) {
 			$aDeprecatedData[$oRow->page_id] = (array)$oRow;
 		}
-		$this->getServices()->getHookContainer()->run( 'WikiExplorer::buildDataSets', [
+		$this->services->getHookContainer()->run( 'WikiExplorer::buildDataSets', [
 			&$aDeprecatedData
 		] );
 		foreach ( $aDeprecatedData as $iKey => $aRow ) {
@@ -427,7 +427,7 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 		foreach ( $aFilter as $oFilter ) {
 			// Check possible custom filters
 			$bResult = true;
-			$bReturn = $this->getServices()->getHookContainer()->run(
+			$bReturn = $this->services->getHookContainer()->run(
 				'WikiExplorerStoreFilterCallbck',
 				[
 					$aDataSet,

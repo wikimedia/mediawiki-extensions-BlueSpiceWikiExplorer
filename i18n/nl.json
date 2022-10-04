@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"McDutchie"
 		]
 	},
 	"bs-wikiexplorer-page-title": "Titel",
@@ -12,5 +13,11 @@
 	"bs-wikiexplorer-last-author": "Laatste bewerker",
 	"bs-wikiexplorer-categories": "Categorieën",
 	"bs-wikiexplorer-linked-files": "Gekoppelde bestanden",
-	"bs-wikiexplorer-linked-pages": "Gekoppelde pagina's"
+	"bs-wikiexplorer-linked-pages": "Gekoppelde pagina's",
+	"bs-wikiexplorer-extension-description": "Artikelen sorteren op criterium",
+	"bs-wikiexplorer-last-comment": "Laatste reactie",
+	"bs-wikiexplorer-last-edit-time": "Datum laatste bewerking",
+	"apihelp-bs-wikiexplorer-store-description": "Voorziet in alle gegevens voor de extensie WikiExplorer",
+	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "API-parameter om aan te geven of de metagegevens al zijn geladen.",
+	"apihelp-bs-wikiexplorer-store-summary": "Voorziet in alle gegevens voor de extensie WikiExplorer"
 }

@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use Wikimedia\ParamValidator\ParamValidator;
 
 /**
  * This class serves as a backend for the wiki explorer store.
@@ -355,9 +356,9 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	public function getAllowedParams() {
 		return parent::getAllowedParams() + [
 			'metaLoaded' => [
-				ApiBase::PARAM_TYPE => 'boolean',
-				ApiBase::PARAM_REQUIRED => false,
-				ApiBase::PARAM_DFLT => false,
+				ParamValidator::PARAM_TYPE => 'boolean',
+				ParamValidator::PARAM_REQUIRED => false,
+				ParamValidator::PARAM_DEFAULT => false,
 			],
 		];
 	}

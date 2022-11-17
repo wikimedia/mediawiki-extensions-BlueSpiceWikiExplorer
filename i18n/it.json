@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Ajeje Brazorf",
+			"Beta16",
 			"GpieroMW",
 			"Stefano"
 		]
@@ -12,7 +13,7 @@
 	"bs-wikiexplorer-last-comment": "Ultimo commento",
 	"bs-wikiexplorer-last-edit-time": "Data dell'ultima modifica",
 	"bs-wikiexplorer-page-size": "Dimensione",
-	"bs-wikiexplorer-last-author": "Ultima modifica",
+	"bs-wikiexplorer-last-author": "Ultimo contributore",
 	"bs-wikiexplorer-categories": "Categorie",
 	"bs-wikiexplorer-linked-files": "File collegati",
 	"bs-wikiexplorer-linked-pages": "Pagine collegate"

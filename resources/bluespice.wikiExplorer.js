@@ -108,6 +108,22 @@ BSWikiExplorer.renderPrototypes = {
 		}
 		sOut = sOut + '</ul>';
 		return sOut;
+	},
+	flaggedrevs_date: function( name, meta, record ) {
+		if( !record.get( 'flaggedrevs_date' ) || record.get( 'flaggedrevs_date' ) == '' ) {
+			return '';
+		}
+		//MW to ISO
+		//YYYYMMDDHHMMSS => YYYY-MM-DDTHH
+		var match = record.get( 'flaggedrevs_date' ).match(
+			/^(\d{4})(\d{2})(\d{2}).*$/
+		);
+		var date = new Date( match[1] + '-' + match[2] + '-' + match[3] );
+		if( !date ) {
+			return '';
+		}
+		meta.attr = 'qtip="' + date.toLocaleDateString() + '"';
+		return date.toLocaleDateString();
 	}
 };
 
@@ -283,22 +299,18 @@ mw.loader.using( 'ext.bluespice.extjs', function() {
 												$cell = $('<td>');
 												$row.append( $cell );
 
-												if( typeof col.render !== "undefined") {
-													if( typeof BSWikiExplorer.renderPrototypes[col.render] !== "undefined") {
-														col.renderer = BSWikiExplorer.renderPrototypes[col.render];
-														value = col.renderer(
-															row[col.dataIndex],
-															{}, //Cell meta... we don't have any
-															record,
-															i,
-															j,
-															store
-														);
-														$cell.append( value );
-														continue;
-													}
-												}
 												value = row[col.dataIndex];
+												if( typeof BSWikiExplorer.renderPrototypes[col.dataIndex] !== "undefined" ) {
+													col.renderer = BSWikiExplorer.renderPrototypes[col.dataIndex];
+													value = col.renderer(
+														row[col.dataIndex],
+														{}, //Cell meta... we don't have any
+														record,
+														i,
+														j,
+														store
+													);
+												}
 												$cell.append( value );
 											}
 										}

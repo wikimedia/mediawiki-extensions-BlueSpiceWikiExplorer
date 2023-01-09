@@ -6,5 +6,7 @@
 	},
 	"bs-wikiexplorer-page-title": "Naslov",
 	"bs-wikiexplorer-page-namespace": "Imenski prostor",
-	"bs-wikiexplorer-is-redirect": "Je preusmeritev"
+	"bs-wikiexplorer-is-redirect": "Je preusmeritev",
+	"bs-wikiexplorer-last-edit-time": "Datum zadnjega urejanja",
+	"bs-wikiexplorer-last-author": "Zadnji urejevalec"
 }

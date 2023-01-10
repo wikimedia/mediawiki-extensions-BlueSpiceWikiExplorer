@@ -31,5 +31,10 @@
 	},
 	"extra": {
 		"installer-name": "BlueSpiceWikiExplorer"
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true
+		}
 	}
 }

@@ -5,5 +5,10 @@
 		]
 	},
 	"bs-wikiexplorer-page-title": "כותרת",
-	"bs-wikiexplorer-page-namespace": "מרחב שם"
+	"bs-wikiexplorer-page-namespace": "מרחב שם",
+	"bs-wikiexplorer-page-size": "גודל",
+	"bs-wikiexplorer-last-author": "העורך האחרון",
+	"bs-wikiexplorer-categories": "קטגוריות",
+	"bs-wikiexplorer-linked-files": "קבצים מקושרים",
+	"bs-wikiexplorer-linked-pages": "דפים מקושרים"
 }

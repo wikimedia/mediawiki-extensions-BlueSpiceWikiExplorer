@@ -67,11 +67,10 @@ BSWikiExplorer.renderPrototypes = {
 		return Ext.util.Format.fileSize( record.get( 'page_len' ) );
 	},
 	page_is_redirect: function( name, meta, record ) {
-		var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/bs-{0}.png" alt="Icon {0}"/>';
 		if ( record.get( 'page_is_redirect' ) == 0 ) {
-			return icon.format( 'cross' );
+			return WikiExplorerBoolIcon( false );
 		}
-		return icon.format( 'tick' );
+		return WikiExplorerBoolIcon( true );
 	},
 	page_categories: function( name, meta, record ) {
 		var sOut = '<ul class="bs-wikiexplorer-list-field">';
@@ -128,12 +127,11 @@ BSWikiExplorer.renderPrototypes = {
 };
 
 WikiExplorerLecayRender_flaggedrevs_state = function( name, meta, record ) {
-	var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/bs-{0}.png" alt="Icon {0}"/>';
 	if ( ( record.get( 'is_flaggedrevs_enabled' ) == 1 ) && ( record.get( 'flaggedrevs_state' ) == 0 ) ) {
-		return icon.format( 'cross' );
+		return WikiExplorerBoolIcon( false );
 	}
 	if ( ( record.get( 'is_flaggedrevs_enabled' ) == 1 ) && ( record.get( 'flaggedrevs_state' ) == 1 ) ) {
-		return icon.format( 'tick' );
+		return WikiExplorerBoolIcon( true );
 	}
 	return '';
 };
@@ -156,15 +154,24 @@ WikiExplorerLecayRender_flaggedrevs_date = function( name, meta, record ) {
 };
 
 WikiExplorerLecayRender_flaggedrevs_is_new_available = function( name, meta, record ) {
-	var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/bs-{0}.png" alt="Icon {0}"/>';
 	if ( ( record.get( 'is_flaggedrevs_enabled' ) == 1 ) && ( record.get( 'flaggedrevs_is_new_available' ) == 0 ) ) {
-		return icon.format( 'cross' );
+		return WikiExplorerBoolIcon( false );
 	}
 	if ( ( record.get( 'is_flaggedrevs_enabled' ) == 1 ) && ( record.get( 'flaggedrevs_is_new_available' ) == 1 ) ) {
-		return icon.format( 'tick' );
+		return WikiExplorerBoolIcon( true );
 	}
 	return '';
 };
+
+WikiExplorerBoolIcon = function( state ) {
+	var icon = '<span class="bs-wikiexplorer-column-bool-{0}" aria-label="{1}"></span>';
+	if ( state === false ) {
+		var iconAriaLabel = mw.message( 'bs-wikiexplorer-icon-bool-false-aria-label' ).text()
+		return icon.format( 'false', iconAriaLabel );
+	}
+	var iconAriaLabel = mw.message( 'bs-wikiexplorer-icon-bool-true-aria-label' ).text()
+		return icon.format( 'true', iconAriaLabel );
+}
 
 mw.loader.using( 'ext.bluespice.extjs', function() {
 	Ext.onReady( function(){

@@ -52,7 +52,11 @@
 			"scripts": [
 				"bluespice.wikiExplorer.js"
 			],
-			"dependencies": "ext.bluespice.extjs"
+			"dependencies": "ext.bluespice.extjs",
+			"messages": [
+				"bs-wikiexplorer-icon-bool-true-aria-label",
+				"bs-wikiexplorer-icon-bool-false-aria-label"
+			]
 		},
 		"ext.bluespice.wikiExplorer.styles": {
 			"styles": [

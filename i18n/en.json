@@ -22,5 +22,7 @@
 	"bs-wikiexplorer-linked-pages": "Linked pages",
 	"apihelp-bs-wikiexplorer-store-description": "Provides all data for the extension WikiExplorer",
 	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "API parameter to indicate whether the MetaData has already been loaded.",
-	"apihelp-bs-wikiexplorer-store-summary": "Provides all data for the extension WikiExplorer"
+	"apihelp-bs-wikiexplorer-store-summary": "Provides all data for the extension WikiExplorer",
+	"bs-wikiexplorer-icon-bool-true-aria-label": "checked",
+	"bs-wikiexplorer-icon-bool-false-aria-label": "unchecked"
 }

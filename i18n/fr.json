@@ -20,5 +20,7 @@
 	"apihelp-bs-wikiexplorer-store-description": "Fournit toutes les données pour l’extension WikiExplorer",
 	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "Paramètre API pour indiquer si les métadonnées ont déjà été chargées.",
 	"apihelp-bs-wikiexplorer-store-summary": "Fournit toutes les données pour l’extension WikiExplorer",
-	"wikiexplorer": "WikiExplorer"
+	"wikiexplorer": "WikiExplorer",
+	"bs-wikiexplorer-icon-bool-true-aria-label": "coché",
+	"bs-wikiexplorer-icon-bool-false-aria-label": "décoché"
 }

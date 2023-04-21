@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"A2y4"
+			"A2y4",
+			"MathXplore"
 		]
 	},
-	"bs-wikiexplorer-categories": "カテゴリ"
+	"bs-wikiexplorer-categories": "カテゴリ",
+	"bs-wikiexplorer-icon-bool-true-aria-label": "チェック済み"
 }

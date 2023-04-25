@@ -2,11 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"BadDog",
-			"Вукан Ц"
+			"Вукан Ц",
+			"Kizule"
 		]
 	},
 	"bs-wikiexplorer-page-title": "Наслов",
 	"bs-wikiexplorer-creation-date": "Датум прављења",
 	"bs-wikiexplorer-last-comment": "Последњи коментар",
-	"bs-wikiexplorer-page-size": "Величина"
+	"bs-wikiexplorer-page-size": "Величина",
+	"bs-wikiexplorer-icon-bool-true-aria-label": "проверено",
+	"bs-wikiexplorer-icon-bool-false-aria-label": "непроверено"
 }

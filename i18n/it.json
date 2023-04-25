@@ -16,5 +16,7 @@
 	"bs-wikiexplorer-last-author": "Ultimo contributore",
 	"bs-wikiexplorer-categories": "Categorie",
 	"bs-wikiexplorer-linked-files": "File collegati",
-	"bs-wikiexplorer-linked-pages": "Pagine collegate"
+	"bs-wikiexplorer-linked-pages": "Pagine collegate",
+	"bs-wikiexplorer-icon-bool-true-aria-label": "selezionato",
+	"bs-wikiexplorer-icon-bool-false-aria-label": "deselezionato"
 }

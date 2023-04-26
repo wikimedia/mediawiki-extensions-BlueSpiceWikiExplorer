@@ -18,5 +18,7 @@
 	"bs-wikiexplorer-last-edit-time": "תאריך עריכה אחרון",
 	"apihelp-bs-wikiexplorer-store-description": "אספקת כל הנתונים עבור ההרחבה WikiExplorer",
 	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "פרמטר API כדי לציין אם המטא־נתונים כבר נטענו.",
-	"apihelp-bs-wikiexplorer-store-summary": "אספקת כל הנתונים עבור ההרחבה WikiExplorer"
+	"apihelp-bs-wikiexplorer-store-summary": "אספקת כל הנתונים עבור ההרחבה WikiExplorer",
+	"bs-wikiexplorer-icon-bool-true-aria-label": "מסומן",
+	"bs-wikiexplorer-icon-bool-false-aria-label": "לא מסומן"
 }

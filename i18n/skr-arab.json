@@ -11,5 +11,6 @@
 	"bs-wikiexplorer-page-size": "سائز",
 	"bs-wikiexplorer-categories": "ونکیاں",
 	"bs-wikiexplorer-linked-pages": "لنک تھئے ورقے",
-	"bs-wikiexplorer-icon-bool-true-aria-label": "پڑتال تھئے"
+	"bs-wikiexplorer-icon-bool-true-aria-label": "پڑتال تھئے",
+	"bs-wikiexplorer-icon-bool-false-aria-label": "پڑتال کائنی تھئے"
 }

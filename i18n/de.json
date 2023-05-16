@@ -4,7 +4,8 @@
 			"Markus Glaser",
 			"Robert Vogel",
 			"Schmackes",
-			"Sebastian Ulbricht"
+			"Sebastian Ulbricht",
+			"DraconicDark"
 		]
 	},
 	"bs-wikiexplorer-extension-description": "Artikel nach Kriterien sortieren lassen",
@@ -22,5 +23,7 @@
 	"bs-wikiexplorer-linked-pages": "verlinkte Seiten",
 	"apihelp-bs-wikiexplorer-store-description": "Bietet alle Daten für die Erweiterung WikiExplorer",
 	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "API-Parameter zur Anzeige, ob die MetaDaten bereits geladen wurden.",
-	"apihelp-bs-wikiexplorer-store-summary": "Stellt alle Daten für die Erweiterung WikiExplorer bereit"
+	"apihelp-bs-wikiexplorer-store-summary": "Stellt alle Daten für die Erweiterung WikiExplorer bereit",
+	"bs-wikiexplorer-icon-bool-true-aria-label": "ausgewählt",
+	"bs-wikiexplorer-icon-bool-false-aria-label": "nicht ausgewählt"
 }

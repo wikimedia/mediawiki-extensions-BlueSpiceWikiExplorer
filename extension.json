@@ -77,7 +77,6 @@
 	"Hooks": {
 		"ChameleonSkinTemplateOutputPageBeforeExec": "\\BlueSpice\\WikiExplorer\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\AddWikiExplorer::callback",
 		"BSUserSidebarGlobalActionsWidgetGlobalActions": "WikiExplorer::onBSUserSidebarGlobalActionsWidgetGlobalActions",
-		"BeforePageDisplay": "\\BlueSpice\\WikiExplorer\\Hook\\BeforePageDisplay\\AddModuleStyles::callback",
 		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface"
 	},
 	"manifest_version": 2

@@ -42,7 +42,8 @@ class SpecialWikiExplorer extends ExtJSBase {
 	 */
 	protected function getModules() {
 		$modules = [
-			'ext.bluespice.wikiExplorer'
+			'ext.bluespice.wikiExplorer',
+			'ext.bluespice.wikiExplorer.styles'
 		];
 		if ( isset( $GLOBALS['wgResourceModules']['ext.bluespice.responsibleEditors.superList'] ) ) {
 			// Attach SuperList plugin if in context

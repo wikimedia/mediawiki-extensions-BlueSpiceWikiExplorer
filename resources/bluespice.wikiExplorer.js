@@ -108,13 +108,13 @@ BSWikiExplorer.renderPrototypes = {
 		sOut = sOut + '</ul>';
 		return sOut;
 	},
-	flaggedrevs_date: function( name, meta, record ) {
-		if( !record.get( 'flaggedrevs_date' ) || record.get( 'flaggedrevs_date' ) == '' ) {
+	contentstabilization_date: function( name, meta, record ) {
+		if( !record.get( 'contentstabilization_date' ) || record.get( 'contentstabilization_date' ) == '' ) {
 			return '';
 		}
 		//MW to ISO
 		//YYYYMMDDHHMMSS => YYYY-MM-DDTHH
-		var match = record.get( 'flaggedrevs_date' ).match(
+		var match = record.get( 'contentstabilization_date' ).match(
 			/^(\d{4})(\d{2})(\d{2}).*$/
 		);
 		var date = new Date( match[1] + '-' + match[2] + '-' + match[3] );
@@ -126,23 +126,23 @@ BSWikiExplorer.renderPrototypes = {
 	}
 };
 
-WikiExplorerLecayRender_flaggedrevs_state = function( name, meta, record ) {
-	if ( ( record.get( 'is_flaggedrevs_enabled' ) == 1 ) && ( record.get( 'flaggedrevs_state' ) == 0 ) ) {
+WikiExplorerLecayRender_contentstabilization_state = function( name, meta, record ) {
+	if ( ( record.get( 'is_contentstabilization_enabled' ) == 1 ) && ( record.get( 'contentstabilization_state' ) == 0 ) ) {
 		return WikiExplorerBoolIcon( false );
 	}
-	if ( ( record.get( 'is_flaggedrevs_enabled' ) == 1 ) && ( record.get( 'flaggedrevs_state' ) == 1 ) ) {
+	if ( ( record.get( 'is_contentstabilization_enabled' ) == 1 ) && ( record.get( 'contentstabilization_state' ) == 1 ) ) {
 		return WikiExplorerBoolIcon( true );
 	}
 	return '';
 };
 
-WikiExplorerLecayRender_flaggedrevs_date = function( name, meta, record ) {
-	if( !record.get( 'flaggedrevs_date' ) || record.get( 'flaggedrevs_date' ) == '' ) {
+WikiExplorerLecayRender_contentstabilization_date = function( name, meta, record ) {
+	if( !record.get( 'contentstabilization_date' ) || record.get( 'contentstabilization_date' ) == '' ) {
 		return '';
 	}
 	//MW to ISO
 	//YYYYMMDDHHMMSS => YYYY-MM-DDTHH
-	var match = record.get( 'flaggedrevs_date' ).match(
+	var match = record.get( 'contentstabilization_date' ).match(
 		/^(\d{4})(\d{2})(\d{2}).*$/
 	);
 	var date = new Date( match[1] + '-' + match[2] + '-' + match[3] );
@@ -153,11 +153,11 @@ WikiExplorerLecayRender_flaggedrevs_date = function( name, meta, record ) {
 	return date.toLocaleDateString();
 };
 
-WikiExplorerLecayRender_flaggedrevs_is_new_available = function( name, meta, record ) {
-	if ( ( record.get( 'is_flaggedrevs_enabled' ) == 1 ) && ( record.get( 'flaggedrevs_is_new_available' ) == 0 ) ) {
+WikiExplorerLecayRender_contentstabilization_is_new_available = function( name, meta, record ) {
+	if ( ( record.get( 'is_contentstabilization_enabled' ) == 1 ) && ( record.get( 'contentstabilization_is_new_available' ) == 0 ) ) {
 		return WikiExplorerBoolIcon( false );
 	}
-	if ( ( record.get( 'is_flaggedrevs_enabled' ) == 1 ) && ( record.get( 'flaggedrevs_is_new_available' ) == 1 ) ) {
+	if ( ( record.get( 'is_contentstabilization_enabled' ) == 1 ) && ( record.get( 'contentstabilization_is_new_available' ) == 1 ) ) {
 		return WikiExplorerBoolIcon( true );
 	}
 	return '';

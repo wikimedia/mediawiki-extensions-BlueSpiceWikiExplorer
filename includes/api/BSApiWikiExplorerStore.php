@@ -109,16 +109,16 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	public static function onGetColumnDefinitions( &$aColumns ) {
 		$aRenderer = [
 			'page_assignments' => 'WikiExplorerLecayRender_page_assignments',
-			'flaggedrevs_state' => 'WikiExplorerLecayRender_flaggedrevs_state',
-			'flaggedrevs_date' => 'WikiExplorerLecayRender_flaggedrevs_date',
-			'flaggedrevs_is_new_available' => 'WikiExplorerLecayRender_flaggedrevs_is_new_available',
+			'contentstabilization_state' => 'WikiExplorerLecayRender_contentstabilization_state',
+			'contentstabilization_date' => 'WikiExplorerLecayRender_contentstabilization_date',
+			'contentstabilization_is_new_available' => 'WikiExplorerLecayRender_contentstabilization_is_new_available',
 		];
 		foreach ( $aColumns as $iKey => $aColumn ) {
 			if ( !isset( $aRenderer[$aColumn['dataIndex']] ) ) {
 				continue;
 			}
 			$aColumns[$iKey]['render'] = $aRenderer[$aColumn['dataIndex']];
-			if ( $aColumn['dataIndex'] == 'flaggedrevs_date' ) {
+			if ( $aColumn['dataIndex'] == 'contentstabilization_date' ) {
 				$aColumns[$iKey]['filter'] = [
 					'type' => 'date',
 					'dataFormat' => 'Ymd',

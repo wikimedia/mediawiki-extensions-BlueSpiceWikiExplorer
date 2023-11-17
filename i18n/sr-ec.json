@@ -11,5 +11,14 @@
 	"bs-wikiexplorer-last-comment": "Последњи коментар",
 	"bs-wikiexplorer-page-size": "Величина",
 	"bs-wikiexplorer-icon-bool-true-aria-label": "проверено",
-	"bs-wikiexplorer-icon-bool-false-aria-label": "непроверено"
+	"bs-wikiexplorer-icon-bool-false-aria-label": "непроверено",
+	"bs-wikiexplorer-extension-description": "Сортирањее чланака према критеријумима",
+	"wikiexplorer": "Истраживач викија",
+	"bs-wikiexplorer-page-namespace": "Именски простор",
+	"bs-wikiexplorer-is-redirect": "је преусмерење",
+	"bs-wikiexplorer-last-edit-time": "Датум последњег уређивања",
+	"bs-wikiexplorer-last-author": "Последњи уредник/ца",
+	"bs-wikiexplorer-categories": "Категорије",
+	"bs-wikiexplorer-linked-files": "Повезане датотеке",
+	"bs-wikiexplorer-linked-pages": "Повезане странице"
 }

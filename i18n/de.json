@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"DraconicDark",
 			"Markus Glaser",
 			"Robert Vogel",
 			"Schmackes",
-			"Sebastian Ulbricht",
-			"DraconicDark"
+			"Sebastian Ulbricht"
 		]
 	},
 	"bs-wikiexplorer-extension-description": "Artikel nach Kriterien sortieren lassen",

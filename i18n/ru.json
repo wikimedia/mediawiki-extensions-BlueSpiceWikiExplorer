@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"Mitte27"
 		]
 	},
-	"bs-wikiexplorer-last-edit-time": "Дата последней правки"
+	"bs-wikiexplorer-last-edit-time": "Дата последней правки",
+	"bs-wikiexplorer-page-size": "Размер"
 }

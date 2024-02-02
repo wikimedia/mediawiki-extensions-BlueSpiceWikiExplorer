@@ -17,5 +17,7 @@
 	"bs-wikiexplorer-linked-files": "File collegate",
 	"bs-wikiexplorer-linked-pages": "Pàggene collegate",
 	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "'U parametre de l'API da indicà ce 'u MetaDate ha state ggià carecate.",
-	"apihelp-bs-wikiexplorer-store-summary": "Dèje tutte le date pe l'estenzione WikiExplorer"
+	"apihelp-bs-wikiexplorer-store-summary": "Dèje tutte le date pe l'estenzione WikiExplorer",
+	"bs-wikiexplorer-icon-bool-true-aria-label": "scacchiate",
+	"bs-wikiexplorer-icon-bool-false-aria-label": "none scacchiate"
 }

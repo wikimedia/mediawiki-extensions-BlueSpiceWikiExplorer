@@ -75,7 +75,6 @@
 		}
 	},
 	"Hooks": {
-		"ChameleonSkinTemplateOutputPageBeforeExec": "\\BlueSpice\\WikiExplorer\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\AddWikiExplorer::callback",
 		"BSUserSidebarGlobalActionsWidgetGlobalActions": "WikiExplorer::onBSUserSidebarGlobalActionsWidgetGlobalActions",
 		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface"
 	},

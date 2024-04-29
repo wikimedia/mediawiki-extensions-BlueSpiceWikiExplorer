@@ -4,19 +4,19 @@
 			"BaRaN6161 TURK"
 		]
 	},
-	"bs-wikiexplorer-extension-description": "Maddeleri ölçütlere göre sırala",
-	"bs-wikiexplorer-page-title": "Başlık",
-	"bs-wikiexplorer-page-namespace": "Ad alanı",
-	"bs-wikiexplorer-creation-date": "Oluşturulma tarihi",
-	"bs-wikiexplorer-is-redirect": "Yönlendirme var",
+	"bs-wikiexplorer-extension-description": "Maddeleri \u00f6l\u00e7\u00fctlere g\u00f6re s\u0131rala",
+	"bs-wikiexplorer-page-title": "Ba\u015fl\u0131k",
+	"bs-wikiexplorer-page-namespace": "Ad alan\u0131",
+	"bs-wikiexplorer-creation-date": "Olu\u015fturulma tarihi",
+	"bs-wikiexplorer-is-redirect": "Y\u00f6nlendirme var",
 	"bs-wikiexplorer-last-comment": "Son yorum",
-	"bs-wikiexplorer-last-edit-time": "Son düzenleme tarihi",
+	"bs-wikiexplorer-last-edit-time": "Son d\u00fczenleme tarihi",
 	"bs-wikiexplorer-page-size": "Boyut",
-	"bs-wikiexplorer-last-author": "Son düzenleyen",
+	"bs-wikiexplorer-last-author": "Son d\u00fczenleyen",
 	"bs-wikiexplorer-categories": "Kategoriler",
-	"bs-wikiexplorer-linked-files": "Bağlantılı dosyalar",
-	"bs-wikiexplorer-linked-pages": "Bağlantılı sayfalar",
-	"apihelp-bs-wikiexplorer-store-description": "WikiExplorer uzantısı için tüm verileri sağlar",
-	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "MetaData'nın önceden yüklenmiş olup olmadığını gösteren API parametresi.",
-	"apihelp-bs-wikiexplorer-store-summary": "WikiExplorer uzantısı için tüm verileri sağlar"
+	"bs-wikiexplorer-linked-files": "Ba\u011flant\u0131l\u0131 dosyalar",
+	"bs-wikiexplorer-linked-pages": "Ba\u011flant\u0131l\u0131 sayfalar",
+	"apihelp-bs-wikiexplorer-store-description": "WikiExplorer uzant\u0131s\u0131 i\u00e7in t\u00fcm verileri sa\u011flar",
+	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "MetaData'n\u0131n \u00f6nceden y\u00fcklenmi\u015f olup olmad\u0131\u011f\u0131n\u0131 g\u00f6steren API parametresi.",
+	"apihelp-bs-wikiexplorer-store-summary": "WikiExplorer uzant\u0131s\u0131 i\u00e7in t\u00fcm verileri sa\u011flar"
 }

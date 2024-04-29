@@ -4,7 +4,7 @@
 			"Eleassar"
 		]
 	},
-	"bs-wikiexplorer-extension-description": "Razvrščanje člankov po merilih",
+	"bs-wikiexplorer-extension-description": "Razvr\u0161\u010danje \u010dlankov po merilih",
 	"bs-wikiexplorer-page-title": "Naslov",
 	"bs-wikiexplorer-page-namespace": "Imenski prostor",
 	"bs-wikiexplorer-creation-date": "Datum ustvaritve",
@@ -16,9 +16,9 @@
 	"bs-wikiexplorer-categories": "Kategorije",
 	"bs-wikiexplorer-linked-files": "Povezane datoteke",
 	"bs-wikiexplorer-linked-pages": "Povezane strani",
-	"apihelp-bs-wikiexplorer-store-description": "Zagotavlja vse podatke za razširitev WikiExplorer",
-	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "API-parameter, ki označuje, ali so metapodatki že naloženi.",
-	"apihelp-bs-wikiexplorer-store-summary": "Zagotavlja vse podatke za razširitev WikiExplorer",
+	"apihelp-bs-wikiexplorer-store-description": "Zagotavlja vse podatke za raz\u0161iritev WikiExplorer",
+	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "API-parameter, ki ozna\u010duje, ali so metapodatki \u017ee nalo\u017eeni.",
+	"apihelp-bs-wikiexplorer-store-summary": "Zagotavlja vse podatke za raz\u0161iritev WikiExplorer",
 	"bs-wikiexplorer-icon-bool-true-aria-label": "obkljukano",
 	"bs-wikiexplorer-icon-bool-false-aria-label": "odkljukano"
 }

@@ -4,21 +4,21 @@
 			"Joetaras"
 		]
 	},
-	"bs-wikiexplorer-extension-description": "Ordene le vôsce pe criterie",
+	"bs-wikiexplorer-extension-description": "Ordene le v\u00f4sce pe criterie",
 	"bs-wikiexplorer-page-title": "Titole",
 	"bs-wikiexplorer-page-namespace": "Namespace",
 	"bs-wikiexplorer-creation-date": "Date de ccrejazione",
-	"bs-wikiexplorer-is-redirect": "Jè reindirizzate",
+	"bs-wikiexplorer-is-redirect": "J\u00e8 reindirizzate",
 	"bs-wikiexplorer-last-comment": "Urteme commende",
 	"bs-wikiexplorer-last-edit-time": "Urtema date de cangiamende",
 	"bs-wikiexplorer-page-size": "Dimenzione",
 	"bs-wikiexplorer-last-author": "Urteme cangiatore",
 	"bs-wikiexplorer-categories": "Categorije",
 	"bs-wikiexplorer-linked-files": "File collegate",
-	"bs-wikiexplorer-linked-pages": "Pàggene collegate",
-	"apihelp-bs-wikiexplorer-store-description": "Dèje tutte le date pe l'estenzione WikiExplorer",
-	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "'U parametre de l'API da indicà ce 'u MetaDate ha state ggià carecate.",
-	"apihelp-bs-wikiexplorer-store-summary": "Dèje tutte le date pe l'estenzione WikiExplorer",
+	"bs-wikiexplorer-linked-pages": "P\u00e0ggene collegate",
+	"apihelp-bs-wikiexplorer-store-description": "D\u00e8je tutte le date pe l'estenzione WikiExplorer",
+	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "'U parametre de l'API da indic\u00e0 ce 'u MetaDate ha state ggi\u00e0 carecate.",
+	"apihelp-bs-wikiexplorer-store-summary": "D\u00e8je tutte le date pe l'estenzione WikiExplorer",
 	"bs-wikiexplorer-icon-bool-true-aria-label": "scacchiate",
 	"bs-wikiexplorer-icon-bool-false-aria-label": "none scacchiate"
 }

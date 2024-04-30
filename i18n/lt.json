@@ -4,10 +4,10 @@
 			"Nokeoo"
 		]
 	},
-	"bs-wikiexplorer-extension-description": "R\u016b\u0161iuoti straipsnius pagal kriterijus",
+	"bs-wikiexplorer-extension-description": "Rūšiuoti straipsnius pagal kriterijus",
 	"bs-wikiexplorer-page-title": "Pavadinimas",
-	"bs-wikiexplorer-page-namespace": "Vard\u0173 sritis",
-	"bs-wikiexplorer-creation-date": "Suk\u016brimo data",
+	"bs-wikiexplorer-page-namespace": "Vardų sritis",
+	"bs-wikiexplorer-creation-date": "Sukūrimo data",
 	"bs-wikiexplorer-is-redirect": "Yra nukreipimas",
 	"bs-wikiexplorer-last-comment": "Paskutinis komentaras",
 	"bs-wikiexplorer-last-edit-time": "Paskutinio redagavimo data",
@@ -16,9 +16,9 @@
 	"bs-wikiexplorer-categories": "Kategorijos",
 	"bs-wikiexplorer-linked-files": "Susieti failai",
 	"bs-wikiexplorer-linked-pages": "Susieti puslapiai",
-	"apihelp-bs-wikiexplorer-store-description": "Pateikia visus WikiExplorer pl\u0117tinio duomenis",
-	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "API parametras, nurodantis, ar metaduomenys jau buvo \u012fkelti.",
-	"apihelp-bs-wikiexplorer-store-summary": "Pateikia visus WikiExplorer pl\u0117tinio duomenis",
-	"bs-wikiexplorer-icon-bool-true-aria-label": "pa\u017eym\u0117ta",
-	"bs-wikiexplorer-icon-bool-false-aria-label": "nepa\u017eym\u0117ta"
+	"apihelp-bs-wikiexplorer-store-description": "Pateikia visus WikiExplorer plėtinio duomenis",
+	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "API parametras, nurodantis, ar metaduomenys jau buvo įkelti.",
+	"apihelp-bs-wikiexplorer-store-summary": "Pateikia visus WikiExplorer plėtinio duomenis",
+	"bs-wikiexplorer-icon-bool-true-aria-label": "pažymėta",
+	"bs-wikiexplorer-icon-bool-false-aria-label": "nepažymėta"
 }

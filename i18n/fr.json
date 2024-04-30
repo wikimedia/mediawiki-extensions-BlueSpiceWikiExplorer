@@ -5,22 +5,22 @@
 			"Verdy p"
 		]
 	},
-	"bs-wikiexplorer-extension-description": "Trier les articles par crit\u00e8res",
+	"bs-wikiexplorer-extension-description": "Trier les articles par critères",
 	"wikiexplorer": "WikiExplorer",
 	"bs-wikiexplorer-page-title": "Titre",
 	"bs-wikiexplorer-page-namespace": "Espace de noms",
-	"bs-wikiexplorer-creation-date": "Date de cr\u00e9ation",
+	"bs-wikiexplorer-creation-date": "Date de création",
 	"bs-wikiexplorer-is-redirect": "Est une redirection",
 	"bs-wikiexplorer-last-comment": "Dernier commentaire",
-	"bs-wikiexplorer-last-edit-time": "Derni\u00e8re date de modification",
+	"bs-wikiexplorer-last-edit-time": "Dernière date de modification",
 	"bs-wikiexplorer-page-size": "Taille",
 	"bs-wikiexplorer-last-author": "Dernier modificateur",
-	"bs-wikiexplorer-categories": "Cat\u00e9gories",
-	"bs-wikiexplorer-linked-files": "Fichiers li\u00e9s",
-	"bs-wikiexplorer-linked-pages": "Pages li\u00e9es",
-	"apihelp-bs-wikiexplorer-store-description": "Fournit toutes les donn\u00e9es pour l\u2019extension WikiExplorer",
-	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "Param\u00e8tre API pour indiquer si les m\u00e9tadonn\u00e9es ont d\u00e9j\u00e0 \u00e9t\u00e9 charg\u00e9es.",
-	"apihelp-bs-wikiexplorer-store-summary": "Fournit toutes les donn\u00e9es pour l\u2019extension WikiExplorer",
-	"bs-wikiexplorer-icon-bool-true-aria-label": "coch\u00e9",
-	"bs-wikiexplorer-icon-bool-false-aria-label": "d\u00e9coch\u00e9"
+	"bs-wikiexplorer-categories": "Catégories",
+	"bs-wikiexplorer-linked-files": "Fichiers liés",
+	"bs-wikiexplorer-linked-pages": "Pages liées",
+	"apihelp-bs-wikiexplorer-store-description": "Fournit toutes les données pour l’extension WikiExplorer",
+	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "Paramètre API pour indiquer si les métadonnées ont déjà été chargées.",
+	"apihelp-bs-wikiexplorer-store-summary": "Fournit toutes les données pour l’extension WikiExplorer",
+	"bs-wikiexplorer-icon-bool-true-aria-label": "coché",
+	"bs-wikiexplorer-icon-bool-false-aria-label": "décoché"
 }

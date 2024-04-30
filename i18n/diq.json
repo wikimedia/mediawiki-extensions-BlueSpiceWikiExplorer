@@ -5,19 +5,19 @@
 			"Orbot707"
 		]
 	},
-	"bs-wikiexplorer-extension-description": "Kriter\u00ea meqaley r\u00eaze kerd\u0131\u015fi",
+	"bs-wikiexplorer-extension-description": "Kriterê meqaley rêze kerdışi",
 	"bs-wikiexplorer-page-title": "Sername",
 	"bs-wikiexplorer-page-namespace": "Heruna nameyan",
-	"bs-wikiexplorer-creation-date": "Tarix\u00ea v\u0131ra\u015ft\u0131\u015fi",
-	"bs-wikiexplorer-is-redirect": "Ser\u015f\u0131k\u0131t\u0131\u015f esto",
-	"bs-wikiexplorer-last-comment": "M\u0131\u015fewreyo pey\u00ean",
-	"bs-wikiexplorer-last-edit-time": "Terix\u00ea vurnay\u0131\u015f\u00ea pey\u00eani",
-	"bs-wikiexplorer-page-size": "G\u0131rdiye",
-	"bs-wikiexplorer-last-author": "Vurnayo\u011fo pey\u00ean",
+	"bs-wikiexplorer-creation-date": "Tarixê vıraştışi",
+	"bs-wikiexplorer-is-redirect": "Serşıkıtış esto",
+	"bs-wikiexplorer-last-comment": "Mışewreyo peyên",
+	"bs-wikiexplorer-last-edit-time": "Terixê vurnayışê peyêni",
+	"bs-wikiexplorer-page-size": "Gırdiye",
+	"bs-wikiexplorer-last-author": "Vurnayoğo peyên",
 	"bs-wikiexplorer-categories": "Kategoriyi",
-	"bs-wikiexplorer-linked-files": "Dosyey\u00ea g\u0131redayeyi",
-	"bs-wikiexplorer-linked-pages": "Pel\u00ea g\u0131redayeyi",
+	"bs-wikiexplorer-linked-files": "Dosyeyê gıredayeyi",
+	"bs-wikiexplorer-linked-pages": "Pelê gıredayeyi",
 	"apihelp-bs-wikiexplorer-store-description": "Seba derganiya WikiExplorer datay tedarik keno",
-	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "Mocnayo\u011f\u00ea Metadatay\u00ea ke veri ra barkerde parametrey\u00ea API aseneno",
-	"apihelp-bs-wikiexplorer-store-summary": "Seba derganiya WikiExplorer dataya p\u00earoy\u0131n tedarik keno"
+	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "Mocnayoğê Metadatayê ke veri ra barkerde parametreyê API aseneno",
+	"apihelp-bs-wikiexplorer-store-summary": "Seba derganiya WikiExplorer dataya pêroyın tedarik keno"
 }

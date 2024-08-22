@@ -19,5 +19,5 @@
 	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "API-parameter, ki označuje, ali so metapodatki že naloženi.",
 	"apihelp-bs-wikiexplorer-store-summary": "Zagotavlja vse podatke za razširitev WikiExplorer",
 	"bs-wikiexplorer-icon-bool-true-aria-label": "obkljukano",
-	"bs-wikiexplorer-icon-bool-false-aria-label": "odkljukano"
+	"bs-wikiexplorer-icon-bool-false-aria-label": "neobkljukano"
 }

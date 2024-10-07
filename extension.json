@@ -24,6 +24,9 @@
 					"package": "BlueSpice Pro"
 				}
 			}
+		},
+		"BlueSpiceWikiExplorer": {
+			"PluginModules": []
 		}
 	},
 	"APIModules": {
@@ -48,19 +51,56 @@
 		"SpecialWikiExplorer": "includes/specials/SpecialWikiExplorer.php"
 	},
 	"ResourceModules": {
-		"ext.bluespice.wikiExplorer": {
+		"ext.bluespice.wikiExplorer.bootstrap": {
 			"scripts": [
-				"bluespice.wikiExplorer.js"
+				"bootstrap.js"
+			]
+		},
+		"ext.bluespice.wikiExplorer.special": {
+			"scripts": [
+				"special.wikiExplorer.js"
 			],
-			"dependencies": "ext.bluespice.extjs",
+			"dependencies": [
+				"ext.bluespice.wikiExplorer.panel"
+			]
+		},
+		"ext.bluespice.wikiExplorer.panel": {
+			"packageFiles": [
+				"ui/Panel.js",
+				{
+					"name": "pluginModules.json",
+					"callback": "\\BlueSpice\\WikiExplorer\\WikiExplorerPluginModules::getPluginModules"
+				}
+			],
+			"dependencies": [
+				"ext.bluespice.wikiExplorer.store"
+			],
 			"messages": [
-				"bs-wikiexplorer-icon-bool-true-aria-label",
-				"bs-wikiexplorer-icon-bool-false-aria-label"
+				"bs-wikiexplorer-page-title",
+				"bs-wikiexplorer-page-namespace",
+				"bs-wikiexplorer-creation-date",
+				"bs-wikiexplorer-is-redirect",
+				"bs-wikiexplorer-last-comment",
+				"bs-wikiexplorer-last-edit-time",
+				"bs-wikiexplorer-page-size",
+				"bs-wikiexplorer-last-author",
+				"bs-wikiexplorer-categories",
+				"bs-wikiexplorer-linked-files",
+				"bs-wikiexplorer-linked-pages"
+			]
+		},
+		"ext.bluespice.wikiExplorer.store": {
+			"scripts": [
+				"store/WikiExplorer.js"
+			],
+			"dependencies": [
+				"ext.bluespice.wikiExplorer.bootstrap",
+				"ext.oOJSPlus.data",
+				"oojs-ui"
 			]
 		},
 		"ext.bluespice.wikiExplorer.styles": {
 			"styles": [
-				"bluespice.wikiExplorer.icons.less",
 				"bluespice.wikiExplorer.less"
 			]
 		}

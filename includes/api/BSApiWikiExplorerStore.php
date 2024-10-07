@@ -226,25 +226,6 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	}
 
 	/**
-	 * Get the ExtJS grid config, if not already loaded. TODO: Change this!
-	 * @return array
-	 */
-	public function getMetaData() {
-		global $wgRequest;
-		$metaLoaded = $wgRequest->getVal( 'metaLoaded', 'false' );
-		// Handle booleans from ExtJs
-		if ( !$metaLoaded || $metaLoaded == 'false' ) {
-			return BlueSpice\WikiExplorer\Extension::getMetadata(
-				0,
-				0,
-				'',
-				''
-			);
-		}
-		return [];
-	}
-
-	/**
 	 *
 	 * @param Query $sQuery
 	 * @param array $aFilter
@@ -387,16 +368,11 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 			= "BSApiWikiExplorerStore::onGetColumnDefinitions";
 
 		set_time_limit( 120 );
-		global $wgRequest;
-		$metaLoaded = $wgRequest->getVal( 'metaLoaded', 'false' );
-		// Handle booleans from ExtJs
-		if ( !$metaLoaded || $metaLoaded == 'false' ) {
-			$aData = [];
-		} else {
-			$this->pageFirstRevisionTimestamp = $this->getPagesFirstRevisionTimestamps();
 
-			$aData = parent::makeData( $sQuery );
-		}
+		$this->pageFirstRevisionTimestamp = $this->getPagesFirstRevisionTimestamps();
+
+		$aData = parent::makeData( $sQuery );
+
 		if ( empty( $aData ) ) {
 			return $aData;
 		}

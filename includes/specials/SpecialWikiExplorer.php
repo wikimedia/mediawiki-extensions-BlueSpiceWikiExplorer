@@ -14,14 +14,12 @@
  * @filesource
  */
 
-use BlueSpice\Special\ExtJSBase;
-
 /**
  * WikiExplorer special page that renders the list itself
  * @package BlueSpice_Extensions
  * @subpackage WikiExplorer
  */
-class SpecialWikiExplorer extends ExtJSBase {
+class SpecialWikiExplorer extends SpecialPage {
 
 	/**
 	 * Constructor of SpecialExtendedStatistics
@@ -31,25 +29,20 @@ class SpecialWikiExplorer extends ExtJSBase {
 	}
 
 	/**
-	 * @return string ID of the HTML element being added
+	 * @inheritDoc
 	 */
-	protected function getId() {
-		return 'superlist_grid';
-	}
+	public function execute( $subPage ) {
+		parent::execute( $subPage );
 
-	/**
-	 * @return array
-	 */
-	protected function getModules() {
-		$modules = [
-			'ext.bluespice.wikiExplorer',
-			'ext.bluespice.wikiExplorer.styles'
-		];
-		if ( isset( $GLOBALS['wgResourceModules']['ext.bluespice.responsibleEditors.superList'] ) ) {
-			// Attach SuperList plugin if in context
-			$modules[] = 'ext.bluespice.responsibleEditors.superList';
-		}
+		$this->getOutput()->enableOOUI();
 
-		return $modules;
+		$this->getOutput()->addModules( 'ext.bluespice.wikiExplorer.special' );
+		$this->getOutput()->addModuleStyles( 'ext.bluespice.wikiExplorer.styles' );
+
+		$this->getOutput()->addHTML( Html::element( 'div', [
+			'id' => 'wikiexplorer-loader',
+			'style' => 'height: 30px;'
+		] ) );
+		$this->getOutput()->addHTML( Html::element( 'div', [ 'id' => 'wikiexplorer' ] ) );
 	}
 }

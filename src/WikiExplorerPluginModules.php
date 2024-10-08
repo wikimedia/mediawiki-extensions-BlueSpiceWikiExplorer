@@ -9,7 +9,7 @@ class WikiExplorerPluginModules {
 	/**
 	 * @return array
 	 */
-	public function getPluginModules(): array {
+	public static function getPluginModules(): array {
 		$registry = new ManifestAttributeBasedRegistry(
 			'BlueSpiceWikiExplorerPluginModules'
 		);

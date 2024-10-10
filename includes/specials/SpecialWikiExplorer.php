@@ -37,7 +37,6 @@ class SpecialWikiExplorer extends SpecialPage {
 		$this->getOutput()->enableOOUI();
 
 		$this->getOutput()->addModules( 'ext.bluespice.wikiExplorer.special' );
-		$this->getOutput()->addModuleStyles( 'ext.bluespice.wikiExplorer.styles' );
 
 		$this->getOutput()->addHTML( Html::element( 'div', [
 			'id' => 'wikiexplorer-loader',

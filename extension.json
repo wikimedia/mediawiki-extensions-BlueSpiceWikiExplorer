@@ -51,29 +51,19 @@
 		"SpecialWikiExplorer": "includes/specials/SpecialWikiExplorer.php"
 	},
 	"ResourceModules": {
-		"ext.bluespice.wikiExplorer.bootstrap": {
-			"scripts": [
-				"bootstrap.js"
-			]
-		},
 		"ext.bluespice.wikiExplorer.special": {
-			"scripts": [
-				"special.wikiExplorer.js"
-			],
-			"dependencies": [
-				"ext.bluespice.wikiExplorer.panel"
-			]
-		},
-		"ext.bluespice.wikiExplorer.panel": {
 			"packageFiles": [
+				{ "name": "bootstrap.js", "main": true },
+				"special.wikiExplorer.js",
+				"store/WikiExplorer.js",
 				"ui/Panel.js",
 				{
 					"name": "pluginModules.json",
 					"callback": "\\BlueSpice\\WikiExplorer\\WikiExplorerPluginModules::getPluginModules"
 				}
 			],
-			"dependencies": [
-				"ext.bluespice.wikiExplorer.store"
+			"styles": [
+				"bluespice.wikiExplorer.less"
 			],
 			"messages": [
 				"bs-wikiexplorer-page-title",
@@ -87,21 +77,10 @@
 				"bs-wikiexplorer-categories",
 				"bs-wikiexplorer-linked-files",
 				"bs-wikiexplorer-linked-pages"
-			]
-		},
-		"ext.bluespice.wikiExplorer.store": {
-			"scripts": [
-				"store/WikiExplorer.js"
 			],
 			"dependencies": [
-				"ext.bluespice.wikiExplorer.bootstrap",
 				"ext.oOJSPlus.data",
 				"oojs-ui"
-			]
-		},
-		"ext.bluespice.wikiExplorer.styles": {
-			"styles": [
-				"bluespice.wikiExplorer.less"
 			]
 		}
 	},

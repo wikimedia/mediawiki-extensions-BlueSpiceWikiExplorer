@@ -128,16 +128,6 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	}
 
 	/**
-	 *
-	 * @param array $aData
-	 * @param array $aMetaData
-	 * @return type
-	 */
-	public function returnData( $aData, $aMetaData = [] ) {
-		return parent::returnData( $aData, $this->getMetaData() );
-	}
-
-	/**
 	 * @inheritDoc
 	 */
 	protected function checkDatasetPermission( Title $title ) {

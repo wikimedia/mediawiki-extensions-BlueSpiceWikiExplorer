@@ -317,7 +317,28 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 		// Last, do trimming
 		$aProcessedData = $this->trimData( $aProcessedData );
 
+		// Add page_link field
+		$aProcessedData = $this->addSecondaryFields( $aProcessedData );
+
 		return $aProcessedData;
+	}
+
+	/**
+	 * Override corresponding method from parent class to add page_link field
+	 * @param array $aTrimmedData
+	 * @return array
+	 */
+	protected function addSecondaryFields( $aTrimmedData ) {
+		foreach ( $aTrimmedData as &$oDataSet ) {
+			$oTitle = $this->services->getTitleFactory()->makeTitle(
+				$oDataSet->page_namespace,
+				$oDataSet->page_title
+			);
+
+			$oDataSet->page_link = $oTitle->getLinkURL();
+		}
+
+		return $aTrimmedData;
 	}
 
 	/**

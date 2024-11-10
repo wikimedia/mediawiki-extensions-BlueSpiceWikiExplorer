@@ -3,7 +3,8 @@
 		"authors": [
 			")8",
 			"Lakejason0",
-			"Xiplus"
+			"Xiplus",
+			"沈澄心"
 		]
 	},
 	"bs-wikiexplorer-page-title": "标题",
@@ -15,5 +16,11 @@
 	"bs-wikiexplorer-last-author": "最后编辑者",
 	"bs-wikiexplorer-categories": "分类",
 	"bs-wikiexplorer-linked-files": "链接的文件",
-	"bs-wikiexplorer-linked-pages": "链接的页面"
+	"bs-wikiexplorer-linked-pages": "链接的页面",
+	"bs-wikiexplorer-extension-description": "按标准来排序条目",
+	"bs-wikiexplorer-is-redirect": "是重定向",
+	"apihelp-bs-wikiexplorer-store-param-metaLoaded": "指示元数据是否已加载的API参数。",
+	"apihelp-bs-wikiexplorer-store-summary": "提供用于WikiExplorer扩展的所有数据",
+	"bs-wikiexplorer-icon-bool-true-aria-label": "已勾选",
+	"bs-wikiexplorer-icon-bool-false-aria-label": "未勾选"
 }

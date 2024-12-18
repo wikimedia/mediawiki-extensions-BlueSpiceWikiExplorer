@@ -185,9 +185,14 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 
 		// Page links
 		$oPageRes = $this->getDB( DB_REPLICA )->select(
-			'pagelinks',
-			[ 'pl_from', 'pl_title', 'pl_namespace' ],
-			[ 'pl_from' => array_keys( $aPageIds ) ]
+			[ 'pagelinks', 'linktarget' ],
+			[ 'pl_from', 'lt_title', 'lt_namespace' ],
+			[ 'pl_from' => array_keys( $aPageIds ) ],
+			__METHOD__,
+			[],
+			[
+				'pagelinks' => [ 'INNER JOIN', 'pl_target_id=lt_id' ],
+			]
 		);
 		foreach ( $oPageRes as $oPageRow ) {
 			$sNS = '';

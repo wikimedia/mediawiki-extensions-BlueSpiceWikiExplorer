@@ -377,11 +377,14 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	 */
 	public function makeData( $sQuery = '' ) {
 		// DEPRECATED! Legacy query building - Please do not use!
-		global $wgHooks;
-		$wgHooks['BSApiExtJSDBTableStoreBeforeQuery'][]
-			= "BSApiWikiExplorerStore::onBeforeQuery";
-		$wgHooks['WikiExplorer::getColumnDefinitions'][]
-			= "BSApiWikiExplorerStore::onGetColumnDefinitions";
+		$this->services->getHookContainer()->register(
+			'BSApiExtJSDBTableStoreBeforeQuery',
+			[ 'BSApiWikiExplorerStore::onBeforeQuery' ]
+		);
+		$this->services->getHookContainer()->register(
+			'WikiExplorer::getColumnDefinitions',
+			[ 'BSApiWikiExplorerStore::onGetColumnDefinitions' ]
+		);
 
 		set_time_limit( 120 );
 

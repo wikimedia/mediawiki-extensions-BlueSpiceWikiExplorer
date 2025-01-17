@@ -14,6 +14,9 @@
  * @filesource
  */
 
+use MediaWiki\Html\Html;
+use MediaWiki\SpecialPage\SpecialPage;
+
 /**
  * WikiExplorer special page that renders the list itself
  * @package BlueSpice_Extensions

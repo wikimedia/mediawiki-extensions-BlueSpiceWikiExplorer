@@ -1,6 +1,8 @@
 <?php
 
+use MediaWiki\Api\ApiBase;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use Wikimedia\ParamValidator\ParamValidator;
 
 /**
@@ -68,7 +70,6 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	}
 
 	/**
-	 *
 	 * @param Instance $oInstance
 	 * @param Query $sQuery
 	 * @param array $aFilter
@@ -103,7 +104,6 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	}
 
 	/**
-	 *
 	 * @param array &$aColumns
 	 */
 	public static function onGetColumnDefinitions( &$aColumns ) {
@@ -144,9 +144,8 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	}
 
 	/**
-	 *
-	 * @param Row $row
-	 * @return type
+	 * @param stdClass $row
+	 * @return stdClass|bool
 	 */
 	public function makeDataSet( $row ) {
 		set_time_limit( 120 );
@@ -159,6 +158,7 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 		$row->page_categories = [];
 		$row->page_links = [];
 		$row->page_linked_files = [];
+
 		return $row;
 	}
 
@@ -221,37 +221,48 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	}
 
 	/**
-	 *
-	 * @param Query $sQuery
+	 * @param string $sQuery
 	 * @param array $aFilter
 	 * @return array
 	 */
 	public function makeTables( $sQuery, $aFilter ) {
-		$query = $this->services->getRevisionStore()->getQueryInfo();
-		$query['tables'][] = 'page';
-		return $query['tables'];
+		$queryBuilder = $this->services->getRevisionStore()
+			->newSelectQueryBuilder( $this->getDb() )
+			->joinComment()
+			->table( 'page' );
+
+		$queryInfo = $queryBuilder->getQueryInfo();
+
+		return $queryInfo['tables'];
 	}
 
 	/**
-	 *
-	 * @param Query $sQuery
+	 * @param string $sQuery
 	 * @param array $aFilter
 	 * @return array
 	 */
 	public function makeFields( $sQuery, $aFilter ) {
-		$query = $this->services->getRevisionStore()->getQueryInfo();
-		return array_merge( parent::makeFields( $sQuery, $aFilter ), $query['fields'], [
-			'page_is_redirect',
-			'page_is_new',
-			'page_touched',
-			'page_len',
-			'page_latest',
-		] );
+		$queryBuilder = $this->services->getRevisionStore()
+			->newSelectQueryBuilder( $this->getDb() )
+			->joinComment()
+			->fields( [
+				'page_is_redirect',
+				'page_is_new',
+				'page_touched',
+				'page_len',
+				'page_latest',
+			] );
+
+		$queryInfo = $queryBuilder->getQueryInfo();
+
+		return array_merge(
+			parent::makeFields( $sQuery, $aFilter ),
+			$queryInfo['fields']
+		);
 	}
 
 	/**
-	 *
-	 * @param Query $sQuery
+	 * @param string $sQuery
 	 * @param array $aFilter
 	 * @return array
 	 */
@@ -260,8 +271,7 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	}
 
 	/**
-	 *
-	 * @param Query $sQuery
+	 * @param string $sQuery
 	 * @param array $aFilter
 	 * @return array
 	 */
@@ -272,15 +282,23 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	}
 
 	/**
-	 *
-	 * @param Query $sQuery
+	 * @param string $sQuery
 	 * @param array $aFilter
 	 * @return array
 	 */
 	public function makeJoinOptions( $sQuery, $aFilter ) {
-		$query = $this->services->getRevisionStore()->getQueryInfo();
-		$query['joins']['revision'] = [ 'LEFT JOIN', 'page_latest = rev_id' ];
-		return $query['joins'];
+		$queryBuilder = $this->services->getRevisionStore()
+			->newSelectQueryBuilder( $this->getDb() )
+			->joinComment()
+			->leftJoin(
+				'revision',
+				null,
+				'page_latest = rev_id'
+			);
+
+		$queryInfo = $queryBuilder->getQueryInfo();
+
+		return $queryInfo['join_conds'];
 	}
 
 	/**
@@ -347,7 +365,6 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function getAllowedParams() {
@@ -355,18 +372,8 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 			'metaLoaded' => [
 				ParamValidator::PARAM_TYPE => 'boolean',
 				ParamValidator::PARAM_REQUIRED => false,
-				ParamValidator::PARAM_DEFAULT => false,
+				ApiBase::PARAM_HELP_MSG => 'apihelp-bs-wikiexplorer-store-param-metaLoaded',
 			],
-		];
-	}
-
-	/**
-	 *
-	 * @return array
-	 */
-	public function getParamDescription() {
-		return parent::getParamDescription() + [
-			'metaLoaded' => 'have the MetaData already been loaded?',
 		];
 	}
 
@@ -413,7 +420,6 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 	}
 
 	/**
-	 *
 	 * @param \stdClass $aDataSet
 	 * @return bool
 	 */

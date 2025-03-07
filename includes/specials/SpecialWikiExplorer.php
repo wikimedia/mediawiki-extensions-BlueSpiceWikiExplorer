@@ -15,14 +15,14 @@
  */
 
 use MediaWiki\Html\Html;
-use MediaWiki\SpecialPage\SpecialPage;
+use OOJSPlus\Special\OOJSGridSpecialPage;
 
 /**
  * WikiExplorer special page that renders the list itself
  * @package BlueSpice_Extensions
  * @subpackage WikiExplorer
  */
-class SpecialWikiExplorer extends SpecialPage {
+class SpecialWikiExplorer extends OOJSGridSpecialPage {
 
 	/**
 	 * Constructor of SpecialExtendedStatistics
@@ -34,11 +34,7 @@ class SpecialWikiExplorer extends SpecialPage {
 	/**
 	 * @inheritDoc
 	 */
-	public function execute( $subPage ) {
-		parent::execute( $subPage );
-
-		$this->getOutput()->enableOOUI();
-
+	public function doExecute( $subPage ) {
 		$this->getOutput()->addModules( 'ext.bluespice.wikiExplorer.special' );
 
 		$this->getOutput()->addHTML( Html::element( 'div', [

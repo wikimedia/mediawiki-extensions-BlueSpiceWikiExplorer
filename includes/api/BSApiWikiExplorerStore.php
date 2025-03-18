@@ -210,7 +210,8 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 		$oImageRes = $this->getDB( DB_REPLICA )->select(
 			'imagelinks',
 			[ 'il_from', 'il_to' ],
-			[ 'il_from' => array_keys( $aPageIds ) ]
+			[ 'il_from' => array_keys( $aPageIds ) ],
+			__METHOD__
 		);
 		foreach ( $oImageRes as $oImageRow ) {
 			$aPageIds[$oImageRow->il_from]->page_linked_files[] = $oImageRow->il_to;

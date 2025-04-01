@@ -1,6 +1,6 @@
 {
 	"name": "BlueSpiceWikiExplorer",
-	"version": "4.2.0-alpha",
+	"version": "6.0.0-alpha",
 	"license-name": "GPL-3.0-only",
 	"url": "https://en.wiki.bluespice.com/wiki/Reference:BlueSpiceWikiExplorer",
 	"author": [
@@ -11,7 +11,7 @@
 	"requires": {
 		"MediaWiki": ">= 1.43.0",
 		"extensions": {
-			"BlueSpiceFoundation": ">= 4.3",
+			"BlueSpiceFoundation": ">= 5.0",
 			"OOJSPlus": ">= 3.0.0"
 		}
 	},

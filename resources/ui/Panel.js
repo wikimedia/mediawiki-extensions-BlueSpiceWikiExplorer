@@ -1,5 +1,6 @@
+/* eslint-disable camelcase */
 bs.wikiexplorer.ui.Panel = function ( cfg ) {
-	cfg = $.extend( {
+	cfg = Object.assign( {
 		padded: true,
 		expanded: false
 	}, cfg || {} );
@@ -57,10 +58,7 @@ bs.wikiexplorer.ui.Panel.prototype.makeGrid = function () {
 				headerText: mw.message( 'bs-wikiexplorer-page-title' ).text(),
 				type: 'url',
 				urlProperty: 'page_link',
-				valueParser: ( val ) => {
-					// Truncate long titles
-					return val.length > 35 ? val.slice( 0, 34 ) + '...' : val;
-				},
+				valueParser: ( val ) => val.length > 35 ? val.slice( 0, 34 ) + '...' : val, // Truncate long titles
 				filter: {
 					type: 'string'
 				},
@@ -70,10 +68,7 @@ bs.wikiexplorer.ui.Panel.prototype.makeGrid = function () {
 			page_namespace: {
 				headerText: mw.message( 'bs-wikiexplorer-page-namespace' ).text(),
 				type: 'text',
-				valueParser: ( val ) => {
-					// Display NS text instead of ID
-					return bs.util.getNamespaceText( val );
-				},
+				valueParser: ( val ) => bs.util.getNamespaceText( val ), // Display NS text instead of ID
 				filter: {
 					type: 'string'
 				},
@@ -116,10 +111,7 @@ bs.wikiexplorer.ui.Panel.prototype.makeGrid = function () {
 			rev_comment_text: {
 				headerText: mw.message( 'bs-wikiexplorer-last-comment' ).text(),
 				type: 'text',
-				valueParser: ( val ) => {
-					// Truncate long comments
-					return val.length > 35 ? val.slice( 0, 34 ) + '...' : val;
-				},
+				valueParser: ( val ) => val.length > 35 ? val.slice( 0, 34 ) + '...' : val, // Truncate long comments
 				filter: {
 					type: 'string'
 				},

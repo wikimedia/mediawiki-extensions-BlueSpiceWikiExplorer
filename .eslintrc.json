@@ -1,18 +1,20 @@
 {
 	"root": true,
 	"extends": [
-		"wikimedia/client-es6",
+		"wikimedia/client",
 		"wikimedia/jquery",
 		"wikimedia/mediawiki"
 	],
-	"rules": {
-		"camelcase": "off"
+	"parserOptions": {
+		"sourceType": "commonjs",
+		"ecmaVersion": 2017
 	},
 	"globals": {
 		"bs": "readonly",
 		"OOJSPlus": "readonly"
 	},
-	"parserOptions": {
-		"ecmaVersion": 8
+	"rules": {
+		"max-len": "off",
+		"no-prototype-builtins": "off"
 	}
 }

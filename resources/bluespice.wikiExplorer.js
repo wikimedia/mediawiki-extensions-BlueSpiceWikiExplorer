@@ -66,12 +66,6 @@ BSWikiExplorer.renderPrototypes = {
 		//meta.attr = 'qtip="' + size + '"';
 		return Ext.util.Format.fileSize( record.get( 'page_len' ) );
 	},
-	page_is_redirect: function( name, meta, record ) {
-		if ( record.get( 'page_is_redirect' ) == 0 ) {
-			return WikiExplorerBoolIcon( false );
-		}
-		return WikiExplorerBoolIcon( true );
-	},
 	page_categories: function( name, meta, record ) {
 		var sOut = '<ul class="bs-wikiexplorer-list-field">';
 		for (var i = 0; i < record.get( 'page_categories' ).length; i++) {
@@ -124,6 +118,13 @@ BSWikiExplorer.renderPrototypes = {
 		meta.attr = 'qtip="' + date.toLocaleDateString() + '"';
 		return date.toLocaleDateString();
 	}
+};
+
+WikiExplorerLecayRender_page_is_redirect = function( name, meta, record ) {
+	if ( record.get( 'page_is_redirect' ) == 1 ) {
+		return WikiExplorerBoolIcon( true );
+	}
+	return WikiExplorerBoolIcon( false );
 };
 
 WikiExplorerLecayRender_contentstabilization_state = function( name, meta, record ) {

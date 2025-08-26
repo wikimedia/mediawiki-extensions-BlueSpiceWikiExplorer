@@ -112,6 +112,7 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 			'contentstabilization_state' => 'WikiExplorerLecayRender_contentstabilization_state',
 			'contentstabilization_date' => 'WikiExplorerLecayRender_contentstabilization_date',
 			'contentstabilization_is_new_available' => 'WikiExplorerLecayRender_contentstabilization_is_new_available',
+			'page_is_redirect' => 'WikiExplorerLecayRender_page_is_redirect',
 		];
 		foreach ( $aColumns as $iKey => $aColumn ) {
 			if ( !isset( $aRenderer[$aColumn['dataIndex']] ) ) {

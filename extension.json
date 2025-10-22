@@ -34,7 +34,9 @@
 		"bs-wikiexplorer-store": "BSApiWikiExplorerStore"
 	},
 	"SpecialPages": {
-		"WikiExplorer": "SpecialWikiExplorer"
+		"WikiExplorer": {
+			"class": "\\BlueSpice\\WikiExplorer\\Special\\SpecialWikiExplorer"
+		}
 	},
 	"MessagesDirs": {
 		"BlueSpiceWikiExplorer": [
@@ -48,8 +50,7 @@
 		"BlueSpice\\WikiExplorer\\": "src/"
 	},
 	"AutoloadClasses": {
-		"BSApiWikiExplorerStore": "includes/api/BSApiWikiExplorerStore.php",
-		"SpecialWikiExplorer": "includes/specials/SpecialWikiExplorer.php"
+		"BSApiWikiExplorerStore": "includes/api/BSApiWikiExplorerStore.php"
 	},
 	"ResourceModules": {
 		"ext.bluespice.wikiExplorer.special": {

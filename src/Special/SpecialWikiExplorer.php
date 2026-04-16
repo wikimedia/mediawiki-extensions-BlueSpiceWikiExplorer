@@ -8,7 +8,12 @@ use OOJSPlus\Special\OOJSGridSpecialPage;
 class SpecialWikiExplorer extends OOJSGridSpecialPage {
 
 	public function __construct() {
-		parent::__construct( 'WikiExplorer', 'read' );
+		parent::__construct( 'WikiExplorer' );
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'read';
 	}
 
 	/**

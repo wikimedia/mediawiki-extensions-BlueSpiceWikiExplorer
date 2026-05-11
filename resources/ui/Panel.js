@@ -275,7 +275,7 @@ bs.wikiexplorer.ui.Panel.prototype.makeGrid = function () {
 							}
 						}
 					} );
-				store.load().done( ( response ) => {
+				store.loadAll().done( ( response ) => {
 					const $table = $( '<table>' );
 
 					// Build header row with visible columns

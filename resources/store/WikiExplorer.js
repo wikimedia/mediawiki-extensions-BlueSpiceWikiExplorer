@@ -30,7 +30,8 @@ bs.wikiexplorer.store.WikiExplorer.prototype.doLoadData = function () {
 	} ).done( ( response ) => {
 		this.request = null;
 		if ( response.hasOwnProperty( 'results' ) ) {
-			dfd.resolve( this.processResponse( response ) );
+			this.total = response.total;
+			dfd.resolve( this.indexData( response.results ) );
 			return;
 		}
 		dfd.reject();

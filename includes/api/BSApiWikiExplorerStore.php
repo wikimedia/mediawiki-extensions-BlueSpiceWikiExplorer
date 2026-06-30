@@ -196,14 +196,13 @@ class BSApiWikiExplorerStore extends BSApiWikiPageStore {
 		);
 		foreach ( $oPageRes as $oPageRow ) {
 			$sNS = '';
-			if ( !empty( $oPageRow->pl_namespace ) ) {
+			if ( !empty( $oPageRow->lt_namespace ) ) {
 				$sNS = BsNamespaceHelper::getNamespaceName(
-					$oPageRow->pl_namespace
+					$oPageRow->lt_namespace
 				);
 				$sNS .= ':';
 			}
-			$aPageIds[$oPageRow->pl_from]->page_links[]
-				= "$sNS$oPageRow->pl_title";
+			$aPageIds[$oPageRow->pl_from]->page_links[] = "$sNS$oPageRow->lt_title";
 		}
 
 		// Image links

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"bs-wikiexplorer-page-title": "Titel",
@@ -9,5 +10,6 @@
 	"bs-wikiexplorer-last-comment": "Lescht Bemierkung",
 	"bs-wikiexplorer-last-edit-time": "Kategorien",
 	"bs-wikiexplorer-page-size": "Gréisst",
-	"bs-wikiexplorer-categories": "Kategorien"
+	"bs-wikiexplorer-categories": "Kategorien",
+	"bs-wikiexplorer-extension-description": "Artikelen no Krittäre sortéieren"
 }
